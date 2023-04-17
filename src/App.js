@@ -12,7 +12,7 @@ import ErrorPage from "./layout/layout/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "Triplaner",
     element: <RootLayOut />,
     errorElement: <ErrorPage />,
     children: [
