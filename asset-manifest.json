@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Triplaner/static/css/main.73fdd859.css",
+    "main.js": "/Triplaner/static/js/main.bfcdef53.js",
+    "static/js/787.b061e1cd.chunk.js": "/Triplaner/static/js/787.b061e1cd.chunk.js",
+    "static/media/bg.png": "/Triplaner/static/media/bg.26c146ca36f5a909293d.png",
+    "static/media/book.svg": "/Triplaner/static/media/book.592a95ac8d79bd8bef36.svg",
+    "static/media/member.svg": "/Triplaner/static/media/member.d7ce42e815d6c1694cf6.svg",
+    "static/media/arrow.svg": "/Triplaner/static/media/arrow.983f693526d5f48a00ed.svg",
+    "static/media/mouse.svg": "/Triplaner/static/media/mouse.e97c7890c07a323e9a42.svg",
+    "static/media/comment.svg": "/Triplaner/static/media/comment.e31092fe09f042d0672a.svg",
+    "index.html": "/Triplaner/index.html",
+    "static/media/search.svg": "/Triplaner/static/media/search.24d4bfc79be3bfa5d4d1.svg",
+    "main.73fdd859.css.map": "/Triplaner/static/css/main.73fdd859.css.map",
+    "main.bfcdef53.js.map": "/Triplaner/static/js/main.bfcdef53.js.map",
+    "787.b061e1cd.chunk.js.map": "/Triplaner/static/js/787.b061e1cd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73fdd859.css",
+    "static/js/main.bfcdef53.js"
+  ]
+}
