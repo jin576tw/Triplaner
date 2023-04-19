@@ -1,5 +1,5 @@
-const SearchPage = ()=>{
-    return( <div>SearchLayOut</div>)
+const SearchPage = () => {
+    return (<div>SearchLayOut</div>)
 }
 
 export default SearchPage

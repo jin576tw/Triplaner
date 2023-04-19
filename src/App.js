@@ -8,7 +8,7 @@ import SearchPage from "./features/Search/SearchPage";
 import TripPage from "./features/Trip/TripPage";
 import AddTripPage from "./features/AddTrip/AddTripPage";
 import MemberPage from "./features/Member/MemberPage";
-import ErrorPage from "./layout/layout/errorPage/ErrorPage";
+import ErrorPage from "./layout/layout/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {

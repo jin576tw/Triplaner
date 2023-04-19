@@ -1,6 +1,6 @@
 
-const MemberPage = ()=>{
-    return( <div>MemberLayOut</div>)
+const MemberPage = () => {
+    return (<div>MemberLayOut</div>)
 }
 
 export default MemberPage

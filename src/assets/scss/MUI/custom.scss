@@ -1,0 +1,17 @@
+.MuiTabPanel-root {
+  padding: 24px 0 0 0 !important;
+}
+
+.MuiButtonBase-root.MuiTab-root {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.MuiButtonBase-root.MuiTab-root.Mui-selected {
+  color: #000000 !important;
+  font-weight: 400;
+}
+
+.MuiTabs-indicator {
+  background-color: #577655 !important;
+}
