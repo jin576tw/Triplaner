@@ -19,19 +19,21 @@ const Index = () => {
       <div className="landingPage">
         <div className="background">
           <div className="bg-block"></div>
+
+          <div className="start">
+            <div className="start-title">
+              <h3>START YOUR TRIP</h3>
+              <div className="start-line"></div>
+            </div>
+            <div className="start-pic"></div>
+          </div>
         </div>
         <div className="title">
           <h2>Triplaner</h2>
           <h1>Triplaner</h1>
           <h4>旅行的好夥伴！最佳旅程規劃網站</h4>
         </div>
-        <div className="start">
-          <div className="start-title">
-            <h3>START YOUR TRIP</h3>
-            <div className="start-line"></div>
-          </div>
-          <div className="start-pic"></div>
-        </div>
+
       </div>
 
       <div className="section searchSection">
@@ -43,12 +45,16 @@ const Index = () => {
         <div className="searchContent">
           <h1 className="sectionTitle">Search</h1>
           <div className="searchBar">
-            <div className="searchBarWarp">
-              <select></select>
-              <select></select>
-              <select></select>
-              <button></button>
-            </div>
+            <form className="searchBarWarp">
+              <select class="form-select">
+                <option selected>所有國家</option>
+              </select>
+              <select class="form-select" >
+                <option selected>所有城市</option>
+              </select>
+              <input class="form-control" type="text" placeholder="請輸入景點關鍵字..." />
+              <button />
+            </form > 
           </div>
         </div>
       </div>

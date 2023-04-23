@@ -69,6 +69,8 @@
     flex-direction: row;
     align-items: center;
     bottom: 0px;
+    left: -349px;
+
 
     .start-title {
       margin-right: 10px;
@@ -147,12 +149,11 @@
         width: 100%;
 
         select {
-          height: 50px;
           width: 30%;
+        }
 
-          border-radius: 8px;
-
-          border-radius: 8px;
+        input{
+          width: 30%;
         }
 
         button {
@@ -219,6 +220,7 @@
       margin-bottom: 30px;
       height: 80px;
       width: 263px;
+      border-radius: 0px;
     }
   }
 }
@@ -243,6 +245,7 @@
   button {
     height: 80px;
     width: 263px;
+    border-radius: 0px;
   }
 }
 
@@ -255,6 +258,7 @@
   button {
     height: 84px;
     width: 460px;
+    border-radius: 0px;
 
     span {
       position: relative;
