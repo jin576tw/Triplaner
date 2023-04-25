@@ -9,6 +9,8 @@ import TripPage from "./features/Trip/TripPage";
 import AddTripPage from "./features/AddTrip/AddTripPage";
 import MemberPage from "./features/Member/MemberPage";
 import ErrorPage from "./layout/layout/ErrorPage/ErrorPage";
+import Index from "./features/Search/pages/index";
+import Detail from "./features/Search/pages/detail/detail";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,16 @@ const router = createBrowserRouter([
       {
         path: "search",
         element: <SearchPage />,
+        children: [
+          {
+            index: true,
+            element: <Index />,
+          },
+          {
+            path: ":target/:id",
+            element: <Detail />,
+          },
+        ],
       },
       {
         path: "trip",

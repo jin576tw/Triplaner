@@ -5,7 +5,7 @@ const SiteWindow = () => {
     <div className="siteWindow ">
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic}/>
+          <img src={pic} alt={pic} />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -21,7 +21,7 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic}/>
+          <img src={pic} alt={pic} />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -37,7 +37,7 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic}/>
+          <img src={pic} alt={pic} />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -53,7 +53,7 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic}/>
+          <img src={pic} alt={pic} />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>

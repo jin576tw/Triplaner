@@ -1,112 +1,112 @@
 .routesWarp {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-  .routeItem {
-    display: flex;
+	.routeItem {
+		display: flex;
 
-    flex-direction: row;
-    max-width: 49%;
-    margin-bottom: 20px;
-    height: 400px;
-    background-color: #ffff;
+		flex-direction: row;
+		max-width: 49%;
+		margin-bottom: 20px;
+		height: 400px;
+		background-color: #ffff;
 
-    .routePic {
-      width: 50%;
+		.routePic {
+			width: 50%;
 
-      // overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-      }
-    }
+			// overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
 
-    .routeDescription {
-      width: 50%;
-      padding: 40px 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+		.routeDescription {
+			width: 50%;
+			padding: 40px 36px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-      .routeContent {
-        h2 {
-          font-family: "Noto Sans TC";
-          font-size: 36px;
-          font-weight: 700;
-          line-height: 52px;
-          letter-spacing: 0.07em;
-          text-align: left;
-        }
+			.routeContent {
+				h2 {
+					font-family: 'Noto Sans TC';
+					font-size: 36px;
+					font-weight: 700;
+					line-height: 52px;
+					letter-spacing: 0.07em;
+					text-align: left;
+				}
 
-        p {
-          margin-top: 20px;
-          font-family: "Noto Sans TC";
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 23px;
-          letter-spacing: 0.07em;
-          text-align: left;
-        }
-      }
+				p {
+					margin-top: 20px;
+					font-family: 'Noto Sans TC';
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 23px;
+					letter-spacing: 0.07em;
+					text-align: left;
+				}
+			}
 
-      .routeTags {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+			.routeTags {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
 
-        p {
-          font-family: Noto Sans TC;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 23px;
-          letter-spacing: 0.07em;
-          text-align: left;
-          color: black;
-        }
+				p {
+					font-family: Noto Sans TC;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 23px;
+					letter-spacing: 0.07em;
+					text-align: left;
+					color: black;
+				}
 
-        .routeLocate {
-          position: relative;
-          padding-left: 35px;
+				.routeLocate {
+					position: relative;
+					padding-left: 35px;
 
-          &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0px;
-            width: 25px;
-            height: 25px;
-            background-image: url("../../../../assets/icons/map-b.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-        }
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0px;
+						width: 25px;
+						height: 25px;
+						background-image: url('../../../../assets/icons/map-b.svg');
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+				}
 
-        .routeFavorite {
-          position: relative;
-          padding-left: 40px;
+				.routeFavorite {
+					position: relative;
+					padding-left: 40px;
 
-          &::before {
-            content: "";
-            cursor: pointer;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0px;
-            width: 25px;
-            height: 25px;
-            background-image: url("../../../../assets/icons/favorites-b.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-        }
-      }
-    }
-  }
+					&::before {
+						content: '';
+						cursor: pointer;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0px;
+						width: 25px;
+						height: 25px;
+						background-image: url('../../../../assets/icons/favorites-b.svg');
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+				}
+			}
+		}
+	}
 }

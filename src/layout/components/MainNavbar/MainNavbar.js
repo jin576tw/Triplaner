@@ -4,7 +4,7 @@ import "./MainNavbar.scss";
 const MainNavbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <NavLink to="" className="navbar-brand">
+      <NavLink to="" className="navbar-brand" end>
         <span>Triplaner</span>
       </NavLink>
 
@@ -14,7 +14,7 @@ const MainNavbar = () => {
             <NavLink>最新消息</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="search">景點查詢</NavLink>
+            <NavLink to="search">探索景點</NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="trip">分享行程</NavLink>
@@ -22,19 +22,19 @@ const MainNavbar = () => {
         </div>
         <div className="navbar-wrap">
           <li className="nav-item">
-          <NavLink>
-            <div className="nav-icon nav-ask"></div>
-          </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="addTrip">
-            <div className="nav-icon nav-trip"></div>
+            <NavLink>
+              <div className="nav-icon nav-ask"></div>
             </NavLink>
           </li>
           <li className="nav-item">
-          <NavLink to="member">
-          <div className="nav-icon nav-member"></div>
-          </NavLink>
+            <NavLink to="addTrip">
+              <div className="nav-icon nav-trip"></div>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="member">
+              <div className="nav-icon nav-member"></div>
+            </NavLink>
           </li>
         </div>
       </ul>

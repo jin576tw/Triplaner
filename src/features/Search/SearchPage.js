@@ -1,5 +1,7 @@
-const SearchPage = () => {
-    return (<div>SearchLayOut</div>)
-}
+import { Outlet } from "react-router-dom";
 
-export default SearchPage
+const SearchPage = () => {
+  return <Outlet></Outlet>;
+};
+
+export default SearchPage;

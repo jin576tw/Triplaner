@@ -33,7 +33,6 @@ const Index = () => {
           <h1>Triplaner</h1>
           <h4>旅行的好夥伴！最佳旅程規劃網站</h4>
         </div>
-
       </div>
 
       <div className="section searchSection">
@@ -46,15 +45,19 @@ const Index = () => {
           <h1 className="sectionTitle">Search</h1>
           <div className="searchBar">
             <form className="searchBarWarp">
-              <select class="form-select">
-                <option selected>所有國家</option>
+              <select className="form-select">
+                <option>所有國家</option>
               </select>
-              <select class="form-select" >
-                <option selected>所有城市</option>
+              <select className="form-select">
+                <option>所有城市</option>
               </select>
-              <input class="form-control" type="text" placeholder="請輸入景點關鍵字..." />
-              <button />
-            </form > 
+              <input
+                className="form-control"
+                type="text"
+                placeholder="請輸入景點關鍵字..."
+              />
+              <button type="button">text</button>
+            </form>
           </div>
         </div>
       </div>
@@ -88,7 +91,9 @@ const Index = () => {
               </li>
             </ul>
           </div>
-          <button className="btn btn-primary">+ More News</button>
+          <button type="button" className="btn btn-primary">
+            + More News
+          </button>
         </div>
       </div>
       <div className="section recommendedSection">
@@ -127,14 +132,16 @@ const Index = () => {
         <RouteItem />
 
         <div className="moreRoute">
-          <button className="btn btn-primary">+ More News</button>
+          <button type="button" className="btn btn-primary">
+            + More News
+          </button>
         </div>
       </div>
 
-
       <div className="addTripButton">
-        <button className="btn btn-secondary">
-          <span>現在就開始規劃我的旅程！</span></button>
+        <button type="button" className="btn btn-secondary">
+          <span>現在就開始規劃我的旅程！</span>
+        </button>
       </div>
     </Fragment>
   );

@@ -1,20 +1,20 @@
 input.form-control {
-    height: 50px;
-    border-radius: 8px !important;
-    font-family: Noto Sans TC !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    line-height: 23px !important;
-    letter-spacing: 0.07em !important;
-    text-align: left !important;
+	height: 50px;
+	border-radius: 8px !important;
+	font-family: Noto Sans TC !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 23px !important;
+	letter-spacing: 0.07em !important;
+	text-align: left !important;
 
-    &:focus {
-        border: 1px solid rgba(87, 118, 85, 0.8);
-        box-shadow: 0px 0px 2px 3px rgba(212, 240, 210, 0.4);
-    }
+	&:focus {
+		border: 1px solid rgba(87, 118, 85, 0.8);
+		box-shadow: 0px 0px 2px 3px rgba(212, 240, 210, 0.4);
+	}
 
-    &:disabled {
-        color: #B0B0B0 !important;
-        border: 1px solid #A8C0A6 !important;
-    }
+	&:disabled {
+		color: #b0b0b0 !important;
+		border: 1px solid #a8c0a6 !important;
+	}
 }

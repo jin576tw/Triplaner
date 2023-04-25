@@ -1,6 +1,5 @@
-
 const MemberPage = () => {
-    return (<div>MemberLayOut</div>)
-}
+  return <div>MemberLayOut</div>;
+};
 
-export default MemberPage
+export default MemberPage;

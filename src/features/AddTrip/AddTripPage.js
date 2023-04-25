@@ -1,6 +1,5 @@
+const AddTripPage = () => {
+  return <div>AddTripLay</div>;
+};
 
-const AddTripPage = ()=>{
-    return( <div>AddTripLay</div>)
-}
-
-export default AddTripPage
+export default AddTripPage;
