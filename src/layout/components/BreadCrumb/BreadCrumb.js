@@ -9,6 +9,8 @@ const BreadCrumbs = () => {
 
   const matches = useMatches();
 
+  // console.log(matches)
+
   const crumbs = matches
     .map((match) => {
       return {
@@ -26,7 +28,7 @@ const BreadCrumbs = () => {
   return (
     showCrumbs && (
       <nav aria-label="breadcrumb">
-        <ol className="breadcrumb">
+        <ol className="breadcrumb mt-2">
           {crumbs.map((crumb) => {
             const isActive = currentPath === crumb.path;
 
