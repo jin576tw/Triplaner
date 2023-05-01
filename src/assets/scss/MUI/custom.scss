@@ -1,17 +1,55 @@
 .MuiTabPanel-root {
-	padding: 24px 0 0 0 !important;
+  padding: 24px 0 0 0 !important;
 }
 
 .MuiButtonBase-root.MuiTab-root {
-	font-size: 16px;
-	font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .MuiButtonBase-root.MuiTab-root.Mui-selected {
-	color: #000000 !important;
-	font-weight: 400;
+  color: #000000 !important;
+  font-weight: 400;
 }
 
 .MuiTabs-indicator {
-	background-color: #577655 !important;
+  background-color: #577655 !important;
+}
+
+.MuiStack-root {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root {
+  background-color: #fff !important;
+  border: 1px #9cb09a solid;
+  border-radius: 8px;
+  height: 50px;
+}
+
+nav.MuiPagination-root.MuiPagination-outlined {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+
+  .MuiPagination-ul {
+    .MuiPaginationItem-root.MuiPaginationItem-outlined.MuiPaginationItem-rounded {
+      border: 1px #a8c0a6 solid;
+      border-radius: 0;
+      font-family: EB Garamond;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 29px;
+      letter-spacing: 0.07em;
+      text-align: center;
+      color: #577655;
+
+      &.Mui-selected.MuiPaginationItem-page {
+        background-color: #c16851 !important;
+        border: transparent;
+        color: white;
+      }
+    }
+  }
 }

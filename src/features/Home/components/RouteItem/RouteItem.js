@@ -3,7 +3,7 @@ import "./RouteItem.scss";
 import pic from "../../../../assets/images/pic02.jpeg";
 const RouteItem = () => {
   return (
-    <div className="routesWarp row">
+    <div className="routesWarp">
       <div className="routeItem col-6 p-0">
         <div className="routePic">
           <img src={pic} alt={pic}></img>

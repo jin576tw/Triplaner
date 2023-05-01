@@ -46,3 +46,8 @@ ul {
 li {
   list-style: none;
 }
+
+.row {
+  width: 100% !important;
+  margin-left: 0 !important;
+}

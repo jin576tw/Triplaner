@@ -49,7 +49,7 @@
   }
 
   input:checked + .slider:before {
-    transform: translateX(97.5%);
+    transform: translateX(calc(100% - 0.25em));
     background-color: #c16851;
   }
 
