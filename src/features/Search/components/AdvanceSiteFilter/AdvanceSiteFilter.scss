@@ -1,0 +1,32 @@
+.filterSiteInput {
+  width: 100%;
+  margin-bottom: 24px;
+
+  label {
+    font-family: Noto Sans TC;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: #577655;
+    margin-bottom: 16px;
+  }
+}
+
+.filterSiteOptions {
+  h4 {
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: #577655;
+    margin-bottom: 16px;
+  }
+
+  .form-check {
+    margin-bottom: 17px;
+  }
+}

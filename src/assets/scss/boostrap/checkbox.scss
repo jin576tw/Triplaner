@@ -1,0 +1,30 @@
+.form-check {
+  .form-check-input {
+    border-radius: 5px !important;
+    border-color: transparent;
+
+    &:checked[type="checkbox"] {
+      background-image: url("../../icons/check.png");
+    }
+
+    &:checked {
+      background-color: #ffff;
+      border-color: transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0px 0px 2px 3px rgba(212, 240, 210, 0.4);
+    }
+  }
+
+  .form-check-label {
+    font-family: "Noto Sans TC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.07em;
+    color: #2c2c2c;
+  }
+}
