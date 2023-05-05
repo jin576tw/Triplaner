@@ -1,0 +1,62 @@
+[
+  {
+    "id": "site001",
+    "name": "景點名稱0001",
+    "image": "https://zh-tw.skyticket.com/guide/wp-content/uploads/2020/03/38107927c0c6a7552696df52658010c2-e1583978798384.jpg",
+    "region": "JP",
+    "country": "日本",
+    "city": "京都",
+    "category": ["nature", "historical"],
+    "favorite": 10542
+  },
+  {
+    "id": "site002",
+    "name": "景點名稱0002",
+    "image": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001379/img/basic/a0001379_main.jpg?20210126174019",
+    "region": "JP",
+    "country": "日本",
+    "city": "東京",
+    "category": ["city", "shopping"],
+    "favorite": 10542
+  },
+  {
+    "id": "site003",
+    "name": "景點名稱0003",
+    "image": "https://www.kkday.com/zh-hk/blog/wp-content/uploads/shutterstock_333525887-1.jpg",
+    "region": "JP",
+    "country": "日本",
+    "city": "北海道",
+    "category": ["playgroundSite", "historical"],
+    "favorite": 10542
+  },
+  {
+    "id": "site004",
+    "name": "景點名稱0004",
+    "image": "https://insidr.co/wp-content/uploads/2018/05/tmg-article_default_mobile.jpg",
+    "region": "EU",
+    "country": "法國",
+    "city": "巴黎",
+    "category": ["city", "historical"],
+    "favorite": 10542
+  },
+  {
+    "id": "site005",
+    "name": "景點名稱0005",
+    "image": "https://www.bring-you.info/wp-content/uploads/2020/12/Berliner_Fernsehturm-1.jpg",
+    "region": "EU",
+    "country": "德國",
+    "city": "柏林",
+    "category": ["city", "historical"],
+    "favorite": 10542
+  },
+  {
+    "id": "site006",
+    "name": "景點名稱0006",
+    "image": "https://www.sundaytour.com.tw/upfiles/chinese/attractions/tw_attractions_caty01481859437.jpg",
+    "region": "EU",
+    "country": "意大利",
+    "city": "威尼斯",
+    "category": ["historical"],
+    "favorite": 10542
+  }
+]

@@ -12,6 +12,8 @@ import DateSelector from "../../../../shared/components/DateSelector/DateSelecto
 import SearchItem from "../../components/SearchItem/SearchItem";
 import PageContent from "../../../../shared/components/PageContent/PageContent";
 
+import sites from "../../../../shared/JSON/searchSites.json";
+
 const Index = () => {
   const [searchParams] = useSearchParams();
 
@@ -19,25 +21,36 @@ const Index = () => {
 
   const [isSitePage, setIsSitePage] = useState(true);
 
-  useEffect(() => {
-    const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    const content = data.map((data, index) => {
-      return <SearchItem key={index} />;
-    });
-    setResults(content);
-  }, []);
+  // 地區
+  const region = searchParams.get("region");
 
+  // 頁面樣式
+  const color = isSitePage ? "siteColor" : "hotelColor";
+
+  // 地區標題
+  const regionTitle = RegionAlias[region];
+
+  /** 取得景點資訊 */
+  const getSites = (sites) => {
+    return sites
+      .filter((site) => site.region === region)
+      .map((site) => {
+        return <SearchItem key={site.id} site={site} />;
+      });
+  };
+
+  /** 切換景點/飯店查詢 */
   const switchSearch = (event) => {
     setIsSitePage(event);
   };
 
-  const color = isSitePage ? "siteColor" : "hotelColor";
-
-  const searchRegion = RegionAlias[searchParams.get("region")];
+  useEffect(() => {
+    setResults(getSites(sites));
+  }, [region]);
 
   return (
     <Fragment>
-      <h1 className="regionTitle">{searchRegion}</h1>
+      <h1 className="regionTitle">{regionTitle}</h1>
       <div className="searchPage d-flex gap-3">
         <div className="searchBar col-3">
           <div className="searchSwitch">

@@ -1,8 +1,12 @@
 import "./SearchItem.scss";
 
-import image from "../../../../assets/images/Site001.png";
+// import image from "../../../../assets/images/Site001.png";
 
-const SearchItem = () => {
+const SearchItem = (props) => {
+  const site = props.site;
+
+  const { image, name, country, city, favorite } = site;
+
   return (
     <div className="searchItem col-4">
       <div className="searchContent">
@@ -10,10 +14,12 @@ const SearchItem = () => {
           <img src={image} alt={image}></img>
         </div>
         <div className="searchTitle">
-          <h3>景點名稱0001</h3>
+          <h3>{name}</h3>
           <div className="searchTags">
-            <span className="tagLocate">國家名, 地名</span>
-            <span className="tagFavorite">10542</span>
+            <span className="tagLocate">
+              {country}, {city}
+            </span>
+            <span className="tagFavorite"> {favorite}</span>
           </div>
         </div>
       </div>
