@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/Triplaner/static/css/main.1883402b.css",
-    "main.js": "/Triplaner/static/js/main.9e5c7c66.js",
+    "main.css": "/Triplaner/static/css/main.be55e86d.css",
+    "main.js": "/Triplaner/static/js/main.38535872.js",
     "static/js/787.b061e1cd.chunk.js": "/Triplaner/static/js/787.b061e1cd.chunk.js",
     "static/media/bg.png": "/Triplaner/static/media/bg.26c146ca36f5a909293d.png",
-    "static/media/Site001.png": "/Triplaner/static/media/Site001.32fae27330a22ab25446.png",
     "static/media/pic01.jpeg": "/Triplaner/static/media/pic01.bf7f1295bf643dca89e1.jpeg",
     "static/media/pic02.jpeg": "/Triplaner/static/media/pic02.1fb860062d3670f3e251.jpeg",
     "static/media/edit.svg": "/Triplaner/static/media/edit.43ab4ee02f5d873490ad.svg",
@@ -21,12 +20,12 @@
     "static/media/map.svg": "/Triplaner/static/media/map.1cddf93b36e15f517792.svg",
     "static/media/separators.svg": "/Triplaner/static/media/separators.2e6fefd961f8a9882f0d.svg",
     "static/media/drop-down.svg": "/Triplaner/static/media/drop-down.aef4167b9feaf5875880.svg",
-    "main.1883402b.css.map": "/Triplaner/static/css/main.1883402b.css.map",
-    "main.9e5c7c66.js.map": "/Triplaner/static/js/main.9e5c7c66.js.map",
+    "main.be55e86d.css.map": "/Triplaner/static/css/main.be55e86d.css.map",
+    "main.38535872.js.map": "/Triplaner/static/js/main.38535872.js.map",
     "787.b061e1cd.chunk.js.map": "/Triplaner/static/js/787.b061e1cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1883402b.css",
-    "static/js/main.9e5c7c66.js"
+    "static/css/main.be55e86d.css",
+    "static/js/main.38535872.js"
   ]
 }
