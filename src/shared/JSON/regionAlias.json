@@ -1,6 +1,36 @@
-{
-  "JP": "日本地區",
-  "EU": "歐洲地區",
-  "AME": "美洲地區",
-  "ASEAN": "東南亞地區"
-}
+[
+  {
+    "code": "EAST_ASIA",
+    "name": "東亞地區",
+    "children": [
+      {
+        "code": "JP",
+        "name": "日本地區"
+      }
+    ]
+  },
+  {
+    "code": "ASEAN",
+    "name": "東南亞地區",
+    "children": []
+  },
+  {
+    "code": "SOUTH_ASIA",
+    "name": "南亞/中東地區"
+  },
+  {
+    "code": "OCEA",
+    "name": "大洋洲地區",
+    "children": []
+  },
+  {
+    "code": "EU",
+    "name": "歐洲地區",
+    "children": []
+  },
+  {
+    "code": "AME",
+    "name": "美州地區",
+    "children": []
+  }
+]

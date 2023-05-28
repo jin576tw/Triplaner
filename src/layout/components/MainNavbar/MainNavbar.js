@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./MainNavbar.scss";
-import { NavDropdown } from "react-bootstrap";
 import RegionAlias from "../../../shared/JSON/regionAlias.json";
+import NavDropDown from "./components/NavDropDown";
 
 const MainNavbar = () => {
-  const regionCode = Object.keys(RegionAlias);
+  const regionData = RegionAlias;
 
   return (
     <nav className="navbar navbar-light bg-light">
@@ -17,15 +17,11 @@ const MainNavbar = () => {
           <li className="nav-item">
             <NavLink to="">最新消息</NavLink>
           </li>
-          <NavDropdown title="探索景點" id="basic-nav-dropdown">
-            {regionCode.map((code) => {
-              return (
-                <NavLink key={code} to={`search?region=${code}`}>
-                  {RegionAlias[code]}
-                </NavLink>
-              );
-            })}
-          </NavDropdown>
+
+          <li className="nav-item nav-dropdown">
+            <NavDropDown title="探索景點 ▾" items={regionData} />
+          </li>
+
           <li className="nav-item">
             <NavLink to="trip">分享行程</NavLink>
           </li>

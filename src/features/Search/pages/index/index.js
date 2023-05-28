@@ -17,6 +17,7 @@ import sites from "../../../../shared/JSON/searchSites.json";
 const Index = () => {
   const [searchParams] = useSearchParams();
 
+  /** 顯示查詢結果 */
   const [results, setResults] = useState([]);
 
   const [isSitePage, setIsSitePage] = useState(true);
@@ -30,21 +31,21 @@ const Index = () => {
   // 地區標題
   const regionTitle = RegionAlias[region];
 
-  /** 取得景點資訊 */
-  const getSites = (sites) => {
-    return sites
-      .filter((site) => site.region === region)
-      .map((site) => {
-        return <SearchItem key={site.id} site={site} />;
-      });
-  };
-
   /** 切換景點/飯店查詢 */
   const switchSearch = (event) => {
     setIsSitePage(event);
   };
 
   useEffect(() => {
+    /** 取得景點資訊 */
+    const getSites = (sites) => {
+      return sites
+        .filter((site) => site.region === region)
+        .map((site) => {
+          return <SearchItem key={site.id} site={site} />;
+        });
+    };
+
     setResults(getSites(sites));
   }, [region]);
 

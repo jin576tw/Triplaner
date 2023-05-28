@@ -19,57 +19,85 @@
     color: #c16851;
   }
 
-  ul {
+  .navbar-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    a {
-      font-family: Noto Sans TC;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 32px;
-      letter-spacing: 0.07em;
-      text-align: right;
-      color: #2c2c2c;
-    }
 
     .navbar-wrap {
       display: flex;
       flex-direction: row;
       align-items: center;
 
+      a {
+        font-family: Noto Sans TC;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0.07em;
+        text-align: right;
+        color: #2c2c2c;
+      }
+
       .nav-item {
-        a {
-          margin: 0 40px;
-        }
+        margin: 0 40px;
 
-        .nav-icon {
-          width: 37.5px;
-          height: 37.5px;
-          margin: 0 20px;
-          cursor: pointer;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center center;
+        &.nav-dropdown {
+          button {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0.07em;
+            text-align: right;
+            color: #2c2c2c;
 
-          &.nav-ask {
-            background-image: url("../../../assets/icons/comment.svg");
+            box-shadow: none;
           }
 
-          &.nav-trip {
-            background-image: url("../../../assets/icons/book.svg");
-          }
+          li {
+            font-family: Noto Sans TC;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0.07em;
+            text-align: right;
+            color: #2c2c2c;
 
-          &.nav-member {
-            background-image: url("../../../assets/icons/member.svg");
+            &:hover {
+              background-color: #eea6944d;
+            }
+
+            .item_active {
+              background-color: transparent;
+              a {
+                color: #c16851 !important;
+              }
+            }
           }
         }
       }
 
-      .nav-item.dropdown {
-        a {
-          margin: 0 30px;
+      .nav-icon {
+        width: 37.5px;
+        height: 37.5px;
+        margin: 0 -20px;
+        cursor: pointer;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &.nav-ask {
+          background-image: url("../../../assets/icons/comment.svg");
+        }
+
+        &.nav-trip {
+          background-image: url("../../../assets/icons/book.svg");
+        }
+
+        &.nav-member {
+          background-image: url("../../../assets/icons/member.svg");
         }
       }
     }
