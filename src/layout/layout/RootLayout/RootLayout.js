@@ -8,7 +8,7 @@ import "./RootLayout.scss";
 import BreadCrumbs from "../../components/BreadCrumb/BreadCrumb";
 
 const RootLayOut = () => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
     // 換頁時移至頁面頂部
@@ -16,7 +16,7 @@ const RootLayOut = () => {
       top: 0,
       behavior: "smooth",
     });
-  }, [pathname]);
+  }, [pathname, search]);
 
   return (
     <Fragment>
