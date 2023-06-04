@@ -13,7 +13,7 @@ const AdvanceSiteFilter = () => {
             type="text"
             placeholder="請輸入景點關鍵字..."
           />
-          <button className="searchBtn" type="submit"></button>
+          <button className="search-inner-btn" type="submit"></button>
         </div>
       </div>
       <div className="filterSiteOptions">
@@ -24,6 +24,7 @@ const AdvanceSiteFilter = () => {
             type="checkbox"
             value=""
             id="natureSite"
+            checked
           />
           <label className="form-check-label" htmlFor="natureSite">
             自然景觀
@@ -35,6 +36,7 @@ const AdvanceSiteFilter = () => {
             type="checkbox"
             value=""
             id="historicalSite"
+            checked
           />
           <label className="form-check-label" htmlFor="historicalSite">
             歷史景觀
@@ -46,6 +48,7 @@ const AdvanceSiteFilter = () => {
             type="checkbox"
             value=""
             id="citySite"
+            checked
           />
           <label className="form-check-label" htmlFor="citySite">
             城市觀光
@@ -57,6 +60,7 @@ const AdvanceSiteFilter = () => {
             type="checkbox"
             value=""
             id="shoppingSite"
+            checked
           />
           <label className="form-check-label" htmlFor="shoppingSite">
             購物逛街
@@ -68,6 +72,7 @@ const AdvanceSiteFilter = () => {
             type="checkbox"
             value=""
             id="playgroundSite"
+            checked
           />
           <label className="form-check-label" htmlFor="playgroundSite">
             休憩遊樂

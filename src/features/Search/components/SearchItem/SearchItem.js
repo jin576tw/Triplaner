@@ -7,8 +7,10 @@ const SearchItem = (props) => {
 
   const { image, name, country, city, favorite } = site;
 
+  const style = `searchItem col-${props.col}`;
+
   return (
-    <div className="searchItem col-4">
+    <div className={style}>
       <div className="searchContent">
         <div className="searchPic">
           <img src={image} alt={image}></img>

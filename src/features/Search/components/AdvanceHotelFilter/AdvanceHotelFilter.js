@@ -13,7 +13,7 @@ const AdvanceHotelFilter = () => {
             type="text"
             placeholder="請輸入景點關鍵字..."
           />
-          <button className="searchBtn" type="submit"></button>
+          <button className="search-inner-btn" type="submit"></button>
         </div>
       </div>
       <div className="filterHotelOptions">
@@ -35,6 +35,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="allHotel"
+            checked
           />
           <label className="form-check-label" htmlFor="allHotel">
             全部
@@ -46,6 +47,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="historicalSite"
+            checked
           />
           <label className="form-check-label" htmlFor="historicalSite">
             飯店（四星以上）
@@ -57,6 +59,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="citySite"
+            checked
           />
           <label className="form-check-label" htmlFor="citySite">
             飯店（一星～三星）
@@ -68,6 +71,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="shoppingSite"
+            checked
           />
           <label className="form-check-label" htmlFor="shoppingSite">
             民宿
@@ -79,6 +83,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="playgroundSite"
+            checked
           />
           <label className="form-check-label" htmlFor="playgroundSite">
             青旅
@@ -93,6 +98,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="natureSite"
+            checked
           />
           <label className="form-check-label" htmlFor="natureSite">
             全部
@@ -104,6 +110,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="historicalSite"
+            checked
           />
           <label className="form-check-label" htmlFor="historicalSite">
             車站/捷運
@@ -115,6 +122,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="citySite"
+            checked
           />
           <label className="form-check-label" htmlFor="citySite">
             車站/捷運
@@ -126,6 +134,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="shoppingSite"
+            checked
           />
           <label className="form-check-label" htmlFor="shoppingSite">
             車站/捷運
@@ -137,6 +146,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="playgroundSite"
+            checked
           />
           <label className="form-check-label" htmlFor="playgroundSite">
             購物中心
@@ -148,6 +158,7 @@ const AdvanceHotelFilter = () => {
             type="checkbox"
             value=""
             id="playgroundSite"
+            checked
           />
           <label className="form-check-label" htmlFor="playgroundSite">
             郊區

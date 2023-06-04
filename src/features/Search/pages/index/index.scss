@@ -32,10 +32,10 @@
       display: flex;
 
       .search-filter {
-        min-height: 165px;
         border-radius: 8px;
         background-color: #ece9e2;
         padding: 30px 24px;
+        height: fit-content;
       }
 
       .search-results {

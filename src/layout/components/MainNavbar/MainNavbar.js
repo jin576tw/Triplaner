@@ -28,7 +28,7 @@ const MainNavbar = () => {
         </div>
         <div className="navbar-wrap">
           <li className="nav-item">
-            <NavLink>
+            <NavLink to="">
               <div className="nav-icon nav-ask"></div>
             </NavLink>
           </li>

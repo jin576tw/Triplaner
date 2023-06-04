@@ -8,11 +8,14 @@ import { useEffect, useState } from "react";
 import SwitchSearch from "../../components/SwitchSearch/SwitchSearch";
 import AdvanceSiteFilter from "../../components/AdvanceSiteFilter/AdvanceSiteFilter";
 import AdvanceHotelFilter from "../../components/AdvanceHotelFilter/AdvanceHotelFilter";
+
 import SearchItem from "../../components/SearchItem/SearchItem";
 import PageContent from "../../../../shared/components/PageContent/PageContent";
 
-import sites from "../../../../shared/JSON/searchSites.json";
+import SITE from "../../../../shared/JSON/DataExample/sitesExample.json";
 import { flatten } from "../../../../core/utils/flatten.utils";
+import RecommendContent from "../../components/RecommendContent/RecommendContent";
+import LoadingComponent from "../../../../shared/components/LoadingComponent/LoadingComponent";
 
 const Index = () => {
   /** 區域資訊 */
@@ -21,19 +24,19 @@ const Index = () => {
   /** 顯示查詢結果 */
   const [searchResults, setSearchResults] = useState([]);
 
-  const [isSitePage, setIsSitePage] = useState(true);
+  /** 切換頁面查詢種類 */
+  const [isSwitched, setIsSwitched] = useState(true);
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // 地區代碼
   const regionCode = searchParams.get("region");
 
-  // 頁面樣式
-  const pageStyle = isSitePage ? "siteColor" : "hotelColor";
+  const showSearch = searchParams.get("showSearch");
 
   /** 切換景點/飯店查詢 */
-  const switchSearch = (event) => {
-    setIsSitePage(event);
+  const switchSearch = () => {
+    setIsSwitched((prev) => !prev);
   };
 
   /** 取得區域資訊 */
@@ -44,23 +47,44 @@ const Index = () => {
       return region.code === code;
     });
 
-    setRegionInfo(region);
+    setRegionInfo(region ? region : {});
+  };
+
+  /** 取得景點資訊 */
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    const results = SITE.filter((site) => site.region === regionCode).map(
+      (site) => {
+        return <SearchItem key={site.id} site={site} col="4" />;
+      }
+    );
+
+    if (!results.length) {
+      alert("查無內容");
+      return;
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    setSearchParams({ region: regionCode, showSearch: true });
+
+    setTimeout(() => {
+      setSearchResults(results);
+    }, 1000);
   };
 
   useEffect(() => {
+    if (!showSearch) {
+      setIsSwitched(true);
+      setSearchResults([]);
+    }
+
     fetchRegionInfo(regionCode);
-
-    /** 取得景點資訊 */
-    const fetchSites = (sites) => {
-      return sites
-        .filter((site) => site.region === regionCode)
-        .map((site) => {
-          return <SearchItem key={site.id} site={site} />;
-        });
-    };
-
-    setSearchResults(fetchSites(sites));
-  }, [regionCode]);
+  }, [regionCode, showSearch]);
 
   return (
     <div className="search-page">
@@ -70,8 +94,8 @@ const Index = () => {
         <div className="search-bar-item">
           <SwitchSearch
             label="我想要找..."
+            isSwitched={isSwitched}
             onSwitch={switchSearch}
-            style={pageStyle}
           />
         </div>
         <div className="search-bar-item">
@@ -88,22 +112,32 @@ const Index = () => {
           />
         </div>
 
-        <button type="submit" className="search-btn"></button>
+        <button
+          type="submit"
+          className="search-btn"
+          onClick={handleSearch}
+        ></button>
       </form>
 
       <div className="search-page-content">
-        {searchResults.length ? (
+        {showSearch ? (
           <div className="search-results-content gap-2">
             <div className="search-filter col-3">
-              {isSitePage ? <AdvanceSiteFilter /> : <AdvanceHotelFilter />}
+              {isSwitched ? <AdvanceSiteFilter /> : <AdvanceHotelFilter />}
             </div>
             <div className="search-results col-9">
               <div className="row g-3">
-                <PageContent data={searchResults} row={10} />
+                {searchResults.length ? (
+                  <PageContent data={searchResults} row={10} />
+                ) : (
+                  <LoadingComponent />
+                )}
               </div>
             </div>
           </div>
-        ) : null}
+        ) : (
+          <RecommendContent code={regionCode} />
+        )}
       </div>
     </div>
   );

@@ -58,5 +58,15 @@
     "city": "威尼斯",
     "category": ["historical"],
     "favorite": 10542
+  },
+  {
+    "id": "site007",
+    "name": "景點名稱0007",
+    "image": "https://res.klook.com/image/upload/q_85/c_fill,w_750/fl_lossy.progressive/q_auto/blogtw/2019/06/1064137e6a8893-f409-4cc2-98ed-aec7e4cc3b78_m.jpg",
+    "region": "JP",
+    "country": "日本",
+    "city": "沖繩",
+    "category": ["playgroundSite", "historical"],
+    "favorite": 10542
   }
 ]
