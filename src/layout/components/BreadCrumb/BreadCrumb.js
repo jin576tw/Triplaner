@@ -8,22 +8,42 @@ import {
 import PageLinks from "../../../shared/JSON/pageLinks.json";
 
 import RegionAlias from "../../../shared/JSON/regionAlias.json";
+import { flatten } from "../../../core/utils/flatten.utils";
+import { useEffect, useState } from "react";
 
 const BreadCrumbs = () => {
-  const location = useLocation();
+  // 所有區域列表
+  const [regionList, setRegionList] = useState([]);
 
+  // 當前Url
+  const location = useLocation();
   const currentPath = location.pathname + location.search;
+
+  /** 抓取queryParams**/
+  const [searchParams] = useSearchParams();
+
+  // 當前頁面地區代碼
+  const regionCode = searchParams.get("region");
 
   const matches = useMatches();
 
-  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    setRegionList(flatten(RegionAlias, "children"));
+  }, []);
 
-  const region = searchParams.get("region");
+  /** 取得路徑位置 */
+  const formatPath = (path) => {
+    return path === "/Triplaner/search" ? path + location.search : path;
+  };
 
   /** 取得路徑名稱 */
-  const getPathName = (path) => {
-    if (path === "/Triplaner/search" && region) {
-      return PageLinks[path] + `-${RegionAlias[searchParams.get("region")]}`;
+  const formatPathName = (path) => {
+    if (path === "/Triplaner/search" && regionCode) {
+      const regionName = regionList.find((region) => {
+        return region.code === regionCode;
+      }).name;
+
+      return PageLinks[path] + `-${regionName}`;
     }
 
     return PageLinks[path];
@@ -33,15 +53,15 @@ const BreadCrumbs = () => {
     .map((match) => {
       return {
         id: match.id,
-        path: match.pathname + location.search,
+        path: formatPath(match.pathname),
         name: PageLinks[match.pathname]
-          ? getPathName(match.pathname)
+          ? formatPathName(match.pathname)
           : match.params.id,
       };
     })
     .filter((path) => path.name);
 
-  const showCrumbs = currentPath !== "/Triplaner";
+  const showCrumbs = location.pathname !== "/Triplaner";
 
   return (
     showCrumbs && (
@@ -52,7 +72,7 @@ const BreadCrumbs = () => {
 
             return !isActive ? (
               <li key={crumb.id} className="breadcrumb-item">
-                <Link to={crumb.path}>{crumb.name}</Link>
+                <Link to={crumb.path}>{crumb.name} </Link>
               </li>
             ) : (
               <li key={crumb.id} className="breadcrumb-item active">

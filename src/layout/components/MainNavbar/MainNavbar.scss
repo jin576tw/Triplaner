@@ -69,8 +69,9 @@
               background-color: #eea6944d;
             }
 
-            .item_active {
-              background-color: transparent;
+            &.item_active {
+              background-color: transparent !important;
+
               a {
                 color: #c16851 !important;
               }
