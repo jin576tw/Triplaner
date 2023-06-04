@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "./SwitchSearch.scss";
 const SwitchSearch = (props) => {
   const [state, setState] = useState(false);
@@ -9,14 +9,17 @@ const SwitchSearch = (props) => {
   };
 
   return (
-    <label className="switch" onChange={handleSwitch}>
-      <input type="checkbox" />
-      <span className="slider"></span>
-      <div className="text">
-        <span>景點</span>
-        <span>住宿 </span>
-      </div>
-    </label>
+    <div className="SiteSwitchButton">
+      <h3 className={props.style}>{props.label}</h3>
+      <label className="switch" onChange={handleSwitch}>
+        <input type="checkbox" />
+        <span className="slider"></span>
+        <div className="text">
+          <span>景點</span>
+          <span>住宿 </span>
+        </div>
+      </label>
+    </div>
   );
 };
 

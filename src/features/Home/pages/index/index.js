@@ -56,7 +56,7 @@ const Index = () => {
                 type="text"
                 placeholder="請輸入景點關鍵字..."
               />
-              <button type="button">text</button>
+              <button type="button" className="search-btn"></button>
             </form>
           </div>
         </div>

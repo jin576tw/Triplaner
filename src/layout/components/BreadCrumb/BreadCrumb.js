@@ -9,12 +9,8 @@ import PageLinks from "../../../shared/JSON/pageLinks.json";
 
 import RegionAlias from "../../../shared/JSON/regionAlias.json";
 import { flatten } from "../../../core/utils/flatten.utils";
-import { useEffect, useState } from "react";
 
 const BreadCrumbs = () => {
-  // 所有區域列表
-  const [regionList, setRegionList] = useState([]);
-
   // 當前Url
   const location = useLocation();
   const currentPath = location.pathname + location.search;
@@ -27,10 +23,6 @@ const BreadCrumbs = () => {
 
   const matches = useMatches();
 
-  useEffect(() => {
-    setRegionList(flatten(RegionAlias, "children"));
-  }, []);
-
   /** 取得路徑位置 */
   const formatPath = (path) => {
     return path === "/Triplaner/search" ? path + location.search : path;
@@ -39,11 +31,13 @@ const BreadCrumbs = () => {
   /** 取得路徑名稱 */
   const formatPathName = (path) => {
     if (path === "/Triplaner/search" && regionCode) {
-      const regionName = regionList.find((region) => {
-        return region.code === regionCode;
-      }).name;
+      const regionList = flatten(RegionAlias, "children");
 
-      return PageLinks[path] + `-${regionName}`;
+      const region = regionList.find((region) => {
+        return region.code === regionCode;
+      });
+
+      return PageLinks[path] + `-${region.name}`;
     }
 
     return PageLinks[path];
