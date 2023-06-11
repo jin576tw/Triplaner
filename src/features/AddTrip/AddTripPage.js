@@ -1,5 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 const AddTripPage = () => {
-  return <div>AddTripLay</div>;
+  return <Outlet></Outlet>;
 };
 
 export default AddTripPage;

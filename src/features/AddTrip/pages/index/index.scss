@@ -1,0 +1,49 @@
+.add-trip-page {
+  .column-item {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding-left: 48px;
+    padding-top: 30px;
+    padding-right: 24px;
+
+    h3 {
+      font-family: Noto Sans TC;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 43px;
+      letter-spacing: 0.07em;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .colum-content {
+      width: 100%;
+      height: calc(100% - 104px);
+      background-color: #f6f6f6;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 100%;
+      border-radius: 8px;
+      background-color: #577655;
+    }
+  }
+
+  .schedule-board {
+    height: 800px;
+  }
+
+  .add-board {
+    height: 400px;
+  }
+}

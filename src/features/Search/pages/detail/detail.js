@@ -1,5 +1,5 @@
-const Detail = () => {
+const SearchPageDetail = () => {
   return <div>Search Detail</div>;
 };
 
-export default Detail;
+export default SearchPageDetail;

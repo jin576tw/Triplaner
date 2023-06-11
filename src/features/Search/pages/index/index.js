@@ -17,7 +17,7 @@ import { flatten } from "../../../../core/utils/flatten.utils";
 import RecommendContent from "../../components/RecommendContent/RecommendContent";
 import LoadingComponent from "../../../../shared/components/LoadingComponent/LoadingComponent";
 
-const Index = () => {
+const SearchPageIndex = () => {
   /** 區域資訊 */
   const [regionInfo, setRegionInfo] = useState({});
 
@@ -143,4 +143,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default SearchPageIndex;
