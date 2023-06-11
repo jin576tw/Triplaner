@@ -3,12 +3,15 @@ import "./TripCard.scss";
 import { ItemTypes } from "../../constant/Constants";
 
 const TripCard = (props) => {
-  // const [{ }, dragRef] = useDrag({
-  //     item: { type: ItemTypes.CARD, ...props.title }
-  // });
+  const [{}, dragRef] = useDrag({
+    type: ItemTypes.CARD,
+    item: {
+      title: props.title,
+    },
+  });
 
   return (
-    <div>
+    <div ref={dragRef}>
       <div className="trip-card">
         <span>{props.title}</span>
       </div>

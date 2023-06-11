@@ -24,6 +24,7 @@
       background-color: #f6f6f6;
       border-radius: 8px;
       padding: 10px;
+      overflow: auto;
     }
 
     &::after {
@@ -44,6 +45,6 @@
   }
 
   .add-board {
-    height: 400px;
+    height: 800px;
   }
 }
