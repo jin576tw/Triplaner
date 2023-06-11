@@ -55,7 +55,8 @@ const BreadCrumbs = () => {
     })
     .filter((path) => path.name);
 
-  const showCrumbs = location.pathname !== "/Triplaner";
+  const showCrumbs =
+    location.pathname !== "/Triplaner" && location.pathname !== "/Triplaner/";
 
   return (
     showCrumbs && (
