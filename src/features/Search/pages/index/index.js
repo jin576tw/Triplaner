@@ -59,7 +59,6 @@ const SearchPageIndex = () => {
         return response.json();
       })
       .then((data) => {
-        exi;
         const results = data
           .filter((site) => site.region === regionCode)
           .map((site) => {
