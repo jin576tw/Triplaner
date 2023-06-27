@@ -54,27 +54,34 @@ const SearchPageIndex = () => {
   const handleSearch = (event) => {
     event.preventDefault();
 
-    const results = SITE.filter((site) => site.region === regionCode).map(
-      (site) => {
-        return <SearchItem key={site.id} site={site} col="4" />;
-      }
-    );
+    fetch("https://triplaner-8e46a-default-rtdb.firebaseio.com/sites.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        exi;
+        const results = data
+          .filter((site) => site.region === regionCode)
+          .map((site) => {
+            return <SearchItem key={site.id} site={site} col="4" />;
+          });
 
-    if (!results.length) {
-      alert("查無內容");
-      return;
-    }
+        if (!results.length) {
+          alert("查無內容");
+          return;
+        }
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
 
-    setSearchParams({ region: regionCode, showSearch: true });
+        setSearchParams({ region: regionCode, showSearch: true });
 
-    setTimeout(() => {
-      setSearchResults(results);
-    }, 1000);
+        setTimeout(() => {
+          setSearchResults(results);
+        }, 1000);
+      });
   };
 
   useEffect(() => {

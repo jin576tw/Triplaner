@@ -5,7 +5,7 @@ import "./SearchItem.scss";
 const SearchItem = (props) => {
   const site = props.site;
 
-  const { image, name, country, city, favorite } = site;
+  const { image, name, country, city, favorites } = site;
 
   const style = `searchItem col-${props.col}`;
 
@@ -21,7 +21,7 @@ const SearchItem = (props) => {
             <span className="tagLocate">
               {country}, {city}
             </span>
-            <span className="tagFavorite"> {favorite}</span>
+            <span className="tagFavorite"> {favorites}</span>
           </div>
         </div>
       </div>
