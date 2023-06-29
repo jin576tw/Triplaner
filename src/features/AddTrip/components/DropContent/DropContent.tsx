@@ -10,11 +10,9 @@ interface DropContentProps {
 const DropContent = (props: DropContentProps) => {
   let items = props.items;
 
-  const [_item, dropRef] = useDrop({
+  const [, dropRef] = useDrop({
     accept: ItemTypes.CARD,
     drop: (drag: any) => {
-      // console.log(drag);
-
       const item = drag.title;
       props.onDrop(item);
     },
