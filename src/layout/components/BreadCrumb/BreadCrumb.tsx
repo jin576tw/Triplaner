@@ -9,8 +9,16 @@ import PageLinks from "../../../shared/JSON/pageLinks.json";
 
 import RegionAlias from "../../../shared/JSON/regionAlias.json";
 import { flatten } from "../../../core/utils/flatten.utils";
+import { RegionItem } from "../../../core/models/region-item.model";
+import { useEffect, useState } from "react";
 
 const BreadCrumbs = () => {
+  // 載入連結
+  const [pageLink, setPageLink] = useState<Record<string, any>>({});
+
+  // 載入地區
+  const [regionData, setRegionData] = useState<RegionItem[]>([]);
+
   // 當前Url
   const location = useLocation();
   const currentPath = location.pathname + location.search;
@@ -23,24 +31,30 @@ const BreadCrumbs = () => {
 
   const matches = useMatches();
 
+  useEffect(() => {
+    setPageLink(PageLinks);
+
+    setRegionData(RegionAlias);
+  }, []);
+
   /** 取得路徑位置 */
-  const formatPath = (path) => {
+  const formatPath = (path: string) => {
     return path === "/Triplaner/search" ? path + location.search : path;
   };
 
   /** 取得路徑名稱 */
-  const formatPathName = (path) => {
+  const formatPathName = (path: string) => {
     if (path === "/Triplaner/search" && regionCode) {
-      const regionList = flatten(RegionAlias, "children");
+      const regionList = flatten(regionData, "children");
 
-      const region = regionList.find((region) => {
+      const region = regionList.find((region: RegionItem) => {
         return region.code === regionCode;
       });
 
-      return PageLinks[path] + `-${region.name}`;
+      return pageLink[path] + `-${region ? region.name : ""}`;
     }
 
-    return PageLinks[path];
+    return pageLink[path] as string;
   };
 
   const crumbs = matches
@@ -48,7 +62,7 @@ const BreadCrumbs = () => {
       return {
         id: match.id,
         path: formatPath(match.pathname),
-        name: PageLinks[match.pathname]
+        name: pageLink[match.pathname]
           ? formatPathName(match.pathname)
           : match.params.id,
       };

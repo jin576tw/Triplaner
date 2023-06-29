@@ -1,6 +1,11 @@
+import { CityInfo } from "../../../../core/models/city-info.model";
 import "./CityItem.scss";
 
-const CityItem = (props) => {
+interface CityItemProps {
+  city: CityInfo;
+}
+
+const CityItem = (props: CityItemProps) => {
   const city = props.city;
 
   return (

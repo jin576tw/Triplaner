@@ -1,7 +1,13 @@
 import Dropdown from "react-multilevel-dropdown";
 import { NavLink, useSearchParams } from "react-router-dom";
+import { RegionItem } from "../../../../core/models/region-item.model";
 
-const NavDropDown = (props) => {
+export interface NavDropDownProps {
+  title: string;
+  items: RegionItem[];
+}
+
+const NavDropDown = (props: NavDropDownProps) => {
   const [searchParams] = useSearchParams();
 
   // 地區
@@ -9,28 +15,24 @@ const NavDropDown = (props) => {
 
   const dropDownItems = props.items;
 
-  const hasSubOptions = (item) => {
-    return item.children && item.children.length > 0;
-  };
-
   return (
     <Dropdown title={props.title} position="right" openOnHover={true}>
-      {dropDownItems.map((item) => {
+      {dropDownItems.map((item: RegionItem) => {
         return (
           <Dropdown.Item
             key={item.code}
             isActive={regionCode === item.code}
             className={regionCode === item.code ? "item_active" : ""}
           >
-            {hasSubOptions(item) ? (
+            {item.children && item.children.length > 0 ? (
               item.name
             ) : (
               <NavLink to={`search?region=${item.code}`}>{item.name}</NavLink>
             )}
 
-            {hasSubOptions(item) ? (
+            {item.children && item.children.length > 0 ? (
               <Dropdown.Submenu position="right">
-                {item.children.map((item) => {
+                {item.children.map((item: RegionItem) => {
                   return (
                     <Dropdown.Item
                       key={item.code}

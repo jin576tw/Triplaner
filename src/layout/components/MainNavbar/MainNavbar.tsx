@@ -2,9 +2,16 @@ import { NavLink } from "react-router-dom";
 import "./MainNavbar.scss";
 import RegionAlias from "../../../shared/JSON/regionAlias.json";
 import NavDropDown from "./components/NavDropDown";
+import { useEffect, useState } from "react";
+import { RegionItem } from "../../../core/models/region-item.model";
 
 const MainNavbar = () => {
-  const regionData = RegionAlias;
+  // 載入地區
+  const [regionData, setRegionData] = useState<RegionItem[]>([]);
+
+  useEffect(() => {
+    setRegionData(RegionAlias);
+  }, []);
 
   return (
     <nav className="navbar navbar-light bg-light">

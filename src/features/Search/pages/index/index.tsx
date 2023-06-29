@@ -12,17 +12,20 @@ import AdvanceHotelFilter from "../../components/AdvanceHotelFilter/AdvanceHotel
 import SearchItem from "../../components/SearchItem/SearchItem";
 import PageContent from "../../../../shared/components/PageContent/PageContent";
 
-import SITE from "../../../../shared/JSON/DataExample/sitesExample.json";
 import { flatten } from "../../../../core/utils/flatten.utils";
 import RecommendContent from "../../components/RecommendContent/RecommendContent";
 import LoadingComponent from "../../../../shared/components/LoadingComponent/LoadingComponent";
+import { RegionItem } from "../../../../core/models/region-item.model";
+import { SiteItem } from "../../../../core/models/site-item.model";
 
 const SearchPageIndex = () => {
   /** 區域資訊 */
-  const [regionInfo, setRegionInfo] = useState({});
+  const [regionInfo, setRegionInfo] = useState<RegionItem | undefined>(
+    undefined
+  );
 
   /** 顯示查詢結果 */
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<React.ReactNode[]>([]);
 
   /** 切換頁面查詢種類 */
   const [isSwitched, setIsSwitched] = useState(true);
@@ -40,23 +43,23 @@ const SearchPageIndex = () => {
   };
 
   /** 取得區域資訊 */
-  const fetchRegionInfo = (code) => {
+  const fetchRegionInfo = (code: string | null) => {
     const regionList = flatten(RegionAlias, "children");
 
-    const region = regionList.find((region) => {
+    const region = regionList.find((region: RegionItem) => {
       return region.code === code;
     });
 
-    setRegionInfo(region ? region : {});
+    setRegionInfo(region ? region : undefined);
   };
 
   /** 取得景點資訊 */
-  const handleSearch = (event) => {
+  const handleSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     fetch("https://triplaner-8e46a-default-rtdb.firebaseio.com/sites.json")
       .then((response) => {
-        return response.json();
+        return response.json() as Promise<SiteItem[]>;
       })
       .then((data) => {
         const results = data
@@ -75,7 +78,9 @@ const SearchPageIndex = () => {
           behavior: "smooth",
         });
 
-        setSearchParams({ region: regionCode, showSearch: true });
+        setSearchParams(`region=${regionCode}&showSearch=true`, {
+          replace: true,
+        });
 
         setTimeout(() => {
           setSearchResults(results);
@@ -94,7 +99,7 @@ const SearchPageIndex = () => {
 
   return (
     <div className="search-page">
-      <h1 className="title">{regionInfo.name}</h1>
+      {regionInfo ? <h1 className="title">{regionInfo.name}</h1> : null}
 
       <form className="search-bar">
         <div className="search-bar-item">
@@ -142,7 +147,7 @@ const SearchPageIndex = () => {
             </div>
           </div>
         ) : (
-          <RecommendContent code={regionCode} />
+          <RecommendContent code={regionCode as string} />
         )}
       </div>
     </div>

@@ -2,8 +2,8 @@ import { useDrag } from "react-dnd";
 import "./TripCard.scss";
 import { ItemTypes } from "../../constant/Constants";
 
-const TripCard = (props) => {
-  const [{}, dragRef] = useDrag({
+const TripCard = (props: { title: string }) => {
+  const [_item, dragRef] = useDrag({
     type: ItemTypes.CARD,
     item: {
       title: props.title,

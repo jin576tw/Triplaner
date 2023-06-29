@@ -10,15 +10,19 @@ import CITY from "../../../../shared/JSON/DataExample/cityExample.json";
 import "./RecommendContent.scss";
 import CityItem from "../CityItem/CityItem";
 
-const RecommendContent = ({ code }) => {
-  const [siteTopTen, setSiteTopTen] = useState([]);
+interface RecommendContentProps {
+  code: string;
+}
 
-  const [hotelTopTen, setHotelTopTen] = useState([]);
+const RecommendContent = ({ code }: RecommendContentProps) => {
+  const [siteTopTen, setSiteTopTen] = useState<React.ReactNode[]>([]);
 
-  const [hotCities, setHotCities] = useState([]);
+  const [hotelTopTen, setHotelTopTen] = useState<React.ReactNode[]>([]);
+
+  const [hotCities, setHotCities] = useState<React.ReactNode[]>([]);
 
   /** 抓取人氣景點Top10 */
-  const fetchSiteTopTen = (code) => {
+  const fetchSiteTopTen = (code: string) => {
     const results = SITE.filter((site) => site.region === code)
       .slice(0, 4)
       .map((site) => {
@@ -29,7 +33,7 @@ const RecommendContent = ({ code }) => {
   };
 
   /** 抓取人氣住宿Top10 */
-  const fetchHotelTopTen = (code) => {
+  const fetchHotelTopTen = (code: string) => {
     const results = SITE.filter((site) => site.region === code)
       .slice(0, 4)
       .map((site) => {
@@ -39,7 +43,7 @@ const RecommendContent = ({ code }) => {
     setHotelTopTen(results);
   };
 
-  const fetchHotCities = (code) => {
+  const fetchHotCities = (code: string) => {
     const results = CITY.filter((city) => city.region === code).map((city) => (
       <CityItem city={city} key={city.id} />
     ));

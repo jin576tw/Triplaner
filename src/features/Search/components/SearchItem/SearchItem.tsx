@@ -1,8 +1,14 @@
+import { SiteItem } from "../../../../core/models/site-item.model";
 import "./SearchItem.scss";
 
 // import image from "../../../../assets/images/Site001.png";
 
-const SearchItem = (props) => {
+interface SearchItemProps {
+  site: SiteItem;
+  col: string;
+}
+
+const SearchItem = (props: SearchItemProps) => {
   const site = props.site;
 
   const { image, name, country, city, favorites } = site;

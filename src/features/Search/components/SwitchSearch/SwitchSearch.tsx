@@ -1,5 +1,12 @@
 import "./SwitchSearch.scss";
-const SwitchSearch = (props) => {
+
+interface SwitchSearchProps {
+  label: string;
+  isSwitched: boolean;
+  onSwitch: () => void;
+}
+
+const SwitchSearch = (props: SwitchSearchProps) => {
   const handleSwitch = () => {
     props.onSwitch();
   };

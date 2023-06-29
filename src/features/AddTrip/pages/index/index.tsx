@@ -1,4 +1,4 @@
-import { DndProvider, useDrop } from "react-dnd";
+import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 import "./index.scss";
@@ -8,11 +8,11 @@ import DropContent from "../../components/DropContent/DropContent";
 
 const AddExamples = ["範例1", "範例2", "範例3", "範例4", "範例5"];
 const AddTripPageIndex = () => {
-  const [tripPlans, setTripPlans] = useState([]);
+  const [tripPlans, setTripPlans] = useState<string[]>([]);
 
-  const [addPlans, setPlans] = useState([]);
+  const [addPlans, setPlans] = useState<string[]>([]);
 
-  const handleDrop = (event) => {
+  const handleDrop = (event: string) => {
     setTripPlans((prev) => [...prev, event]);
   };
 

@@ -1,8 +1,13 @@
 import { Pagination } from "@mui/material";
 import { Fragment, useState } from "react";
 
-const PageContent = (props) => {
-  const [currentPage, setCurrentPage] = useState(1);
+interface PageContentProps {
+  data: React.ReactNode[];
+  row: number;
+}
+
+const PageContent = (props: PageContentProps) => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const data = props.data;
 
@@ -13,7 +18,8 @@ const PageContent = (props) => {
   const endIndex = startIndex + itemsPerPage;
   const currentData = data.slice(startIndex, endIndex);
 
-  const handleChange = (event, value) => {
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+    console.log(_event);
     setCurrentPage(value);
   };
 

@@ -9,9 +9,9 @@ import TripPage from "./features/Trip/TripPage";
 import AddTripPage from "./features/AddTrip/AddTripPage";
 import MemberPage from "./features/Member/MemberPage";
 import ErrorPage from "./layout/layout/ErrorPage/ErrorPage";
-import SearchPageIndex from "./features/Search/pages/index";
+import SearchPageIndex from "./features/Search/pages/index/index";
 import SearchPageDetail from "./features/Search/pages/detail/detail";
-import AddTripPageIndex from "./features/AddTrip/pages/index";
+import AddTripPageIndex from "./features/AddTrip/pages/index/index";
 
 const router = createBrowserRouter([
   {

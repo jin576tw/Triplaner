@@ -1,6 +1,11 @@
 import "./RecommendList.scss";
 
-const RecommendList = (props) => {
+interface RecommendListProps {
+  title: string;
+  items: React.ReactNode[];
+}
+
+const RecommendList = (props: RecommendListProps) => {
   const items = props.items;
 
   return (

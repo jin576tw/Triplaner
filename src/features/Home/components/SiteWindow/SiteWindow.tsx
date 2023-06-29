@@ -1,11 +1,14 @@
 import "./SiteWindow.scss";
-import pic from "../../../../assets/images/pic01.jpeg";
+// import pic from "../../../../assets/images/pic01.jpeg";
 const SiteWindow = () => {
   return (
     <div className="siteWindow ">
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic} />
+          <img
+            src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2021/12/Hero-iStock-1326007584.renditionimage.1700.1133.jpg"
+            alt="pic"
+          />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -21,7 +24,10 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic} />
+          <img
+            src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2021/12/Hero-iStock-1326007584.renditionimage.1700.1133.jpg"
+            alt="pic"
+          />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -37,7 +43,10 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic} />
+          <img
+            src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2021/12/Hero-iStock-1326007584.renditionimage.1700.1133.jpg"
+            alt="pic"
+          />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>
@@ -53,7 +62,10 @@ const SiteWindow = () => {
       </div>
       <div className="windowItem col-3">
         <div className="itemPic">
-          <img src={pic} alt={pic} />
+          <img
+            src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2021/12/Hero-iStock-1326007584.renditionimage.1700.1133.jpg"
+            alt="pic"
+          />
         </div>
         <div className="itemDescription">
           <h3>景點名稱0001</h3>

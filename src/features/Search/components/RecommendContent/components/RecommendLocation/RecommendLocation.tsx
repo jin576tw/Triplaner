@@ -1,6 +1,11 @@
 import "./RecommendLocation.scss";
 
-const RecommendLocation = (props) => {
+interface RecommendLocationProps {
+  title: string;
+  items: React.ReactNode[];
+}
+
+const RecommendLocation = (props: RecommendLocationProps) => {
   const items = props.items;
 
   return (

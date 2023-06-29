@@ -2,12 +2,17 @@ import { useDrop } from "react-dnd";
 import { ItemTypes } from "../../constant/Constants";
 import TripCard from "../TripCard/TripCard";
 
-const DropContent = (props) => {
+interface DropContentProps {
+  items: string[];
+  onDrop: (item: string) => void;
+}
+
+const DropContent = (props: DropContentProps) => {
   let items = props.items;
 
-  const [{}, dropRef] = useDrop({
+  const [_item, dropRef] = useDrop({
     accept: ItemTypes.CARD,
-    drop: (drag) => {
+    drop: (drag: any) => {
       // console.log(drag);
 
       const item = drag.title;

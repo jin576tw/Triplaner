@@ -1,12 +1,14 @@
 import "./RouteItem.scss";
 
-import pic from "../../../../assets/images/pic02.jpeg";
 const RouteItem = () => {
   return (
     <div className="routesWarp">
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">
@@ -28,7 +30,10 @@ const RouteItem = () => {
       </div>
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">
@@ -50,7 +55,10 @@ const RouteItem = () => {
       </div>
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">
@@ -72,7 +80,10 @@ const RouteItem = () => {
       </div>
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">
@@ -94,7 +105,10 @@ const RouteItem = () => {
       </div>
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">
@@ -116,7 +130,10 @@ const RouteItem = () => {
       </div>
       <div className="routeItem col-6 p-0">
         <div className="routePic">
-          <img src={pic} alt={pic}></img>
+          <img
+            src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
+            alt="pic"
+          ></img>
         </div>
         <div className="routeDescription">
           <div className="routeContent">

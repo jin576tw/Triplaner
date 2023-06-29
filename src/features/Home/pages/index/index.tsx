@@ -11,7 +11,11 @@ import RouteItem from "../../components/RouteItem/RouteItem";
 const Index = () => {
   const [value, setValue] = useState("1");
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (
+    event: React.SyntheticEvent<Element, Event>,
+    newValue: any
+  ) => {
+    console.log(event);
     setValue(newValue);
   };
   return (
