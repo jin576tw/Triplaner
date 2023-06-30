@@ -1,8 +1,8 @@
-import { CityInfo } from "../../../../core/models/city-info.model";
+import { CityInfoItem } from "../../../../core/models/city-info.model";
 import "./CityItem.scss";
 
 interface CityItemProps {
-  city: CityInfo;
+  city: CityInfoItem;
 }
 
 const CityItem = (props: CityItemProps) => {
@@ -14,7 +14,7 @@ const CityItem = (props: CityItemProps) => {
         <img src={city.image} alt={city.image}></img>
         <div className="mask"></div>
       </div>
-      <p className="city-name">{city.name}</p>
+      <p className="city-name">{city.cityName}</p>
     </div>
   );
 };

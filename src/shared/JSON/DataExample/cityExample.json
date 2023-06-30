@@ -1,32 +1,54 @@
 [
   {
-    "id": "city001",
-    "name": "東京",
-    "image": "https://media.zenfs.com/zh-tw/ctwant_com_582/a5b4f402c2ba9a395dfad3228da5ab1a",
-    "region": "JP"
+    "regionCode": "JP",
+    "regionName": "日本地區",
+    "cityList": [
+      {
+        "cityCode": "city001",
+        "cityName": "東京",
+        "image": "https://media.zenfs.com/zh-tw/ctwant_com_582/a5b4f402c2ba9a395dfad3228da5ab1a"
+      },
+      {
+        "cityCode": "city002",
+        "cityName": "京都",
+        "image": "https://i1.wp.com/www.tripresso.com/blog/wp-content/uploads/2019/06/boontohhgraphy.jpeg?resize=800%2C400&ssl=1"
+      },
+      {
+        "cityCode": "city003",
+        "cityName": "大阪",
+        "image": "https://resources.matcha-jp.com/resize/720x2000/2022/11/11-131807.webp"
+      },
+      {
+        "cityCode": "city004",
+        "cityName": "札幌",
+        "image": "https://obs.line-scdn.net/0hACbCE_vaHmxfOjK5bm5hO2VsHQNsVg1vOwxPbxxUQFgiWVo4MV1TAnw7SFtyClkyNlxYDn06BV10Xg09YAtT/w644"
+      },
+      {
+        "cityCode": "city005",
+        "cityName": "奈良",
+        "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
+      }
+    ]
   },
   {
-    "id": "city002",
-    "name": "京都",
-    "image": "https://i1.wp.com/www.tripresso.com/blog/wp-content/uploads/2019/06/boontohhgraphy.jpeg?resize=800%2C400&ssl=1",
-    "region": "JP"
-  },
-  {
-    "id": "city003",
-    "name": "大阪",
-    "image": "https://resources.matcha-jp.com/resize/720x2000/2022/11/11-131807.webp",
-    "region": "JP"
-  },
-  {
-    "id": "city004",
-    "name": "札幌",
-    "image": "https://obs.line-scdn.net/0hACbCE_vaHmxfOjK5bm5hO2VsHQNsVg1vOwxPbxxUQFgiWVo4MV1TAnw7SFtyClkyNlxYDn06BV10Xg09YAtT/w644",
-    "region": "JP"
-  },
-  {
-    "id": "city005",
-    "name": "奈良",
-    "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg",
-    "region": "JP"
+    "regionCode": "EU",
+    "regionName": "歐洲地區",
+    "cityList": [
+      {
+        "cityCode": "city006",
+        "cityName": "巴黎",
+        "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
+      },
+      {
+        "cityCode": "city007",
+        "cityName": "柏林",
+        "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
+      },
+      {
+        "cityCode": "city008",
+        "cityName": "威尼斯",
+        "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
+      }
+    ]
   }
 ]

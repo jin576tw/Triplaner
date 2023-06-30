@@ -17,12 +17,18 @@ import RecommendContent from "../../components/RecommendContent/RecommendContent
 import LoadingComponent from "../../../../shared/components/LoadingComponent/LoadingComponent";
 import { RegionItem } from "../../../../core/models/region-item.model";
 import { SiteItem } from "../../../../core/models/site-item.model";
+import MultiSelect from "../../../../shared/components/MultiSelect/MultiSelect";
+import { SelectOption } from "../../../../core/models/select-option.model";
+
+import CITY from "../../../../shared/JSON/DataExample/cityExample.json";
 
 const SearchPageIndex = () => {
   /** 區域資訊 */
   const [regionInfo, setRegionInfo] = useState<RegionItem | undefined>(
     undefined
   );
+  /** 查詢多選選項 */
+  const [searchOptions, setSearchOptions] = useState<SelectOption[]>([]);
 
   /** 顯示查詢結果 */
   const [searchResults, setSearchResults] = useState<React.ReactNode[]>([]);
@@ -88,11 +94,31 @@ const SearchPageIndex = () => {
       });
   };
 
+  const fetchSearchOption = (code: string | null) => {
+    const options = CITY.filter(({ regionCode }) => regionCode === code).map(
+      (region) => {
+        return {
+          label: region.regionName,
+          options: region.cityList.map((city) => {
+            return {
+              value: city.cityCode,
+              label: city.cityName,
+            };
+          }),
+        };
+      }
+    );
+
+    setSearchOptions(options);
+  };
+
   useEffect(() => {
     if (!showSearch) {
       setIsSwitched(true);
       setSearchResults([]);
     }
+
+    fetchSearchOption(regionCode);
 
     fetchRegionInfo(regionCode);
   }, [regionCode, showSearch]);
@@ -110,9 +136,7 @@ const SearchPageIndex = () => {
           />
         </div>
         <div className="search-bar-item">
-          <select className="form-select">
-            <option>京都、大阪、奈良</option>
-          </select>
+          <MultiSelect options={searchOptions} />
         </div>
 
         <div className="search-bar-item">

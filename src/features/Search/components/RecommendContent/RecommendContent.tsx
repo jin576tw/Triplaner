@@ -44,9 +44,11 @@ const RecommendContent = ({ code }: RecommendContentProps) => {
   };
 
   const fetchHotCities = (code: string) => {
-    const results = CITY.filter((city) => city.region === code).map((city) => (
-      <CityItem city={city} key={city.id} />
-    ));
+    const results = CITY.find(
+      ({ regionCode }) => regionCode === code
+    )?.cityList.map((city) => (
+      <CityItem city={city} key={city.cityCode} />
+    )) as React.ReactNode[];
 
     setHotCities(results);
   };

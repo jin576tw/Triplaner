@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import "./index.scss";
 
@@ -7,9 +7,16 @@ import { Box, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import SiteWindow from "../../components/SiteWindow/SiteWindow";
 import RouteItem from "../../components/RouteItem/RouteItem";
+import MultiSelect from "../../../../shared/components/MultiSelect/MultiSelect";
+import { SelectOption } from "../../../../core/models/select-option.model";
+
+import CITY from "../../../../shared/JSON/DataExample/cityExample.json";
 
 const Index = () => {
   const [value, setValue] = useState("1");
+
+  /** 查詢多選選項 */
+  const [searchOptions, setSearchOptions] = useState<SelectOption[]>([]);
 
   const handleChange = (
     event: React.SyntheticEvent<Element, Event>,
@@ -18,6 +25,26 @@ const Index = () => {
     console.log(event);
     setValue(newValue);
   };
+
+  const fetchSearchOption = () => {
+    const options = CITY.map((region) => {
+      return {
+        label: region.regionName,
+        options: region.cityList.map((city) => {
+          return {
+            value: city.cityCode,
+            label: city.cityName,
+          };
+        }),
+      };
+    });
+
+    setSearchOptions(options);
+  };
+
+  useEffect(() => {
+    fetchSearchOption();
+  }, []);
   return (
     <Fragment>
       <div className="landingPage">
@@ -52,9 +79,10 @@ const Index = () => {
               <select className="form-select">
                 <option>所有國家</option>
               </select>
-              <select className="form-select">
-                <option>所有城市</option>
-              </select>
+              <div style={{ width: "30%" }}>
+                <MultiSelect options={searchOptions} />
+              </div>
+
               <input
                 className="form-control"
                 type="text"

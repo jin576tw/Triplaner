@@ -1,6 +1,11 @@
 export interface CityInfo {
-  id: string;
-  name: string;
+  regionCode: string;
+  regionName: string;
+  cityList: CityInfoItem[];
+}
+
+export interface CityInfoItem {
+  cityCode: string;
+  cityName: string;
   image: string;
-  region: string;
 }
