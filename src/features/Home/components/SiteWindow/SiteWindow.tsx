@@ -1,8 +1,19 @@
 import "./SiteWindow.scss";
+import React from "react";
+import Slider from "react-slick";
+
 // import pic from "../../../../assets/images/pic01.jpeg";
 const SiteWindow = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="siteWindow ">
+    <div className="siteWindow">
       <div className="windowItem col-3">
         <div className="itemPic">
           <img
