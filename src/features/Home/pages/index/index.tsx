@@ -18,6 +18,8 @@ const Index = () => {
   /** 查詢多選選項 */
   const [searchOptions, setSearchOptions] = useState<SelectOption[]>([]);
 
+  const [popularRoutes, setPopularRoutes] = useState<any[]>([]);
+
   const handleChange = (
     event: React.SyntheticEvent<Element, Event>,
     newValue: any
@@ -42,8 +44,13 @@ const Index = () => {
     setSearchOptions(options);
   };
 
+  const fetchPopularRoutes = () => {
+    setPopularRoutes([1, 2, 3, 4, 5, 6]);
+  };
+
   useEffect(() => {
     fetchSearchOption();
+    fetchPopularRoutes();
   }, []);
   return (
     <Fragment>
@@ -159,9 +166,17 @@ const Index = () => {
         </Box>
       </div>
 
+      {/* Popular Route */}
       <div className="section popularRouteSection">
         <h1 className="sectionTitle">Popular Route</h1>
-        <RouteItem />
+
+        <div className="routesWarp col-12">
+          <div className="row g-3">
+            {popularRoutes.map(() => (
+              <RouteItem />
+            ))}
+          </div>
+        </div>
 
         <div className="moreRoute">
           <button type="button" className="btn btn-primary">
