@@ -20,6 +20,8 @@ const Index = () => {
 
   const [popularRoutes, setPopularRoutes] = useState<any[]>([]);
 
+  const [recommendSites, setRecommendSites] = useState<any[]>([]);
+
   const handleChange = (
     event: React.SyntheticEvent<Element, Event>,
     newValue: any
@@ -48,9 +50,14 @@ const Index = () => {
     setPopularRoutes([1, 2, 3, 4, 5, 6]);
   };
 
+  const fetchRecommendSites = () => {
+    setRecommendSites([1, 2, 3, 4, 5, 6, 7, 8]);
+  };
+
   useEffect(() => {
     fetchSearchOption();
     fetchPopularRoutes();
+    fetchRecommendSites();
   }, []);
   return (
     <Fragment>
@@ -151,16 +158,16 @@ const Index = () => {
               </TabList>
             </Box>
             <TabPanel value="1">
-              <SiteWindow />
+              <SiteWindow sites={recommendSites} />
             </TabPanel>
             <TabPanel value="2">
-              <SiteWindow />
+              <SiteWindow sites={recommendSites} />
             </TabPanel>
             <TabPanel value="3">
-              <SiteWindow />
+              <SiteWindow sites={recommendSites} />
             </TabPanel>
             <TabPanel value="4">
-              <SiteWindow />
+              <SiteWindow sites={recommendSites} />
             </TabPanel>
           </TabContext>
         </Box>

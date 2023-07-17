@@ -21,6 +21,11 @@
 @import url("./assets/scss/boostrap/checkbox.scss");
 
 @import url("./assets//scss/MUI/custom.scss");
+
+/* react-slick */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 html,
 body {
   width: 100% !important;
