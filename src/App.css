@@ -11,7 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* Custom css */
-@import url("./assets//scss/common.scss");
+@import url("./assets/scss/common.scss");
 
 /* boostrap override */
 @import url("./assets/scss/boostrap/button.scss");
@@ -20,7 +20,7 @@
 @import url("./assets/scss/boostrap/breadcrumb.scss");
 @import url("./assets/scss/boostrap/checkbox.scss");
 
-@import url("./assets//scss/MUI/custom.scss");
+@import url("./assets/scss/MUI/custom.scss");
 
 /* react-slick */
 @import "~slick-carousel/slick/slick.css";

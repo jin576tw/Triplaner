@@ -1,31 +1,15 @@
 import "./SiteWindow.scss";
-import Slider from "react-slick";
 import WindowItem from "./WindowItem/WindowItem";
+import SliderComponent from "../../../../shared/components/SliderComponent/SliderComponent";
 
 interface SiteWindowProps {
   sites: any[];
 }
 
 const SiteWindow = (props: SiteWindowProps) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-  };
+  const sites = props.sites.map((site) => <WindowItem name={site} />);
 
-  const sites = props.sites;
-
-  return (
-    <div className="siteWindow">
-      <Slider {...settings}>
-        {sites.map((site) => (
-          <WindowItem name={site} />
-        ))}
-      </Slider>
-    </div>
-  );
+  return <SliderComponent data={sites} count={4} />;
 };
 
 export default SiteWindow;

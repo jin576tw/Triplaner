@@ -1,0 +1,32 @@
+.slick-dots {
+  bottom: -40px;
+  text-align: left;
+  z-index: 1;
+
+  li.slick-active button:before {
+    color: #293a29;
+  }
+}
+
+.custom-arrow {
+  position: absolute;
+  z-index: 2;
+  bottom: -45px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  background-image: url("../../../assets/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.next-arrow {
+    right: 10px;
+  }
+
+  &.prev-arrow {
+    right: 58px;
+    transform: scaleX(-1);
+  }
+}
