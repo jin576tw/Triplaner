@@ -12,7 +12,7 @@ const RecommendList = (props: RecommendListProps) => {
     <div className="recommend-list">
       <h2>{props.title}</h2>
 
-      {items.length ? (
+      {items && items.length ? (
         <div className="row g-2">{items.map((item) => item)}</div>
       ) : (
         "尚未建立"
