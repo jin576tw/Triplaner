@@ -9,6 +9,7 @@ const RouteItem = () => {
             src="https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/Tainan_CP1125X624_1_rnf80b.jpg"
             alt="pic"
           ></img>
+          <div className="mask"></div>
         </div>
         <div className="route_description">
           <div className="route_title">

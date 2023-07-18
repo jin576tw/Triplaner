@@ -86,9 +86,21 @@
       }
 
       .start-line {
-        width: 240px;
+        width: 0px;
         height: 1px;
         background-color: black;
+        animation-name: start;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes start {
+        from {
+          width: 0px;
+        }
+        to {
+          width: 240px;
+        }
       }
     }
 
@@ -196,11 +208,17 @@
           top: 0px;
           right: 0;
           content: "";
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           background-image: url("../../../../assets/icons/arrow.svg");
           background-repeat: no-repeat;
           background-size: contain;
+          transition: 0.5s;
+        }
+
+        &:hover::after {
+          right: -12px;
+          transition: 0.5s;
         }
       }
     }

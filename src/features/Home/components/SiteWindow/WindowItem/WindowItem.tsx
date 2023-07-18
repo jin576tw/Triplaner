@@ -12,6 +12,10 @@ const WindowItem = (props: WindowItemProps) => {
             src="https://www.cathaypacific.com/content/dam/focal-point/cx/inspiration/2021/12/Hero-iStock-1326007584.renditionimage.1700.1133.jpg"
             alt="pic"
           />
+          <div className="mask">
+            <div className="add-trip-btn"></div>
+            <span> 加入行程</span>
+          </div>
         </div>
         <div className="item_description">
           <h3>{`景點名稱000${props.name}`}</h3>
