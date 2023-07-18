@@ -23,22 +23,18 @@ const RecommendContent = ({ code }: RecommendContentProps) => {
 
   /** 抓取人氣景點Top10 */
   const fetchSiteTopTen = (code: string) => {
-    const results = SITE.filter((site) => site.region === code)
-      .slice(0, 4)
-      .map((site) => {
-        return <SearchItem key={site.id} site={site} col="3" />;
-      });
+    const results = SITE.filter((site) => site.region === code).map((site) => {
+      return <SearchItem key={site.id} site={site} />;
+    });
 
     setSiteTopTen(results);
   };
 
   /** 抓取人氣住宿Top10 */
   const fetchHotelTopTen = (code: string) => {
-    const results = SITE.filter((site) => site.region === code)
-      .slice(0, 4)
-      .map((site) => {
-        return <SearchItem key={site.id} site={site} col="3" />;
-      });
+    const results = SITE.filter((site) => site.region === code).map((site) => {
+      return <SearchItem key={site.id} site={site} />;
+    });
 
     setHotelTopTen(results);
   };

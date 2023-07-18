@@ -2,7 +2,9 @@ import Slider, { CustomArrowProps } from "react-slick";
 import "./SliderComponent.scss";
 
 interface SliderComponentProps {
-  data: React.ReactNode[];
+  nodes: React.ReactNode[];
+  showDots?: boolean;
+  showArrows?: boolean;
   count: number;
 }
 
@@ -14,22 +16,26 @@ const CustomPrevArrow = ({ onClick }: CustomArrowProps) => {
   return <div className="custom-arrow prev-arrow" onClick={onClick} />;
 };
 
-const SliderComponent = (props: SliderComponentProps) => {
+const SliderComponent = ({
+  nodes,
+  count,
+  showDots = true,
+  showArrows = true,
+}: SliderComponentProps) => {
   const settings = {
-    dots: true,
+    dots: showDots,
+    arrows: showArrows,
     infinite: true,
     speed: 500,
-    slidesToShow: props.count,
-    slidesToScroll: props.count,
+    slidesToShow: count,
+    slidesToScroll: count,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
 
-  const data = props.data;
-
   return (
     <div style={{ width: "100%" }}>
-      <Slider {...settings}>{data.map((result) => result)}</Slider>
+      <Slider {...settings}>{nodes.map((node) => node)}</Slider>
     </div>
   );
 };

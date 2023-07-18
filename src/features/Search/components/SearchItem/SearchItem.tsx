@@ -1,11 +1,9 @@
 import { SiteItem } from "../../../../core/models/site-item.model";
 import "./SearchItem.scss";
 
-// import image from "../../../../assets/images/Site001.png";
-
 interface SearchItemProps {
   site: SiteItem;
-  col: string;
+  col?: string;
 }
 
 const SearchItem = (props: SearchItemProps) => {
@@ -13,7 +11,7 @@ const SearchItem = (props: SearchItemProps) => {
 
   const { image, name, country, city, favorites } = site;
 
-  const style = `searchItem col-${props.col}`;
+  const style = props.col ? `searchItem col-${props.col}` : `searchItem p-1`;
 
   return (
     <div className={style}>

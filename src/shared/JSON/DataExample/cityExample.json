@@ -27,6 +27,31 @@
         "cityCode": "city005",
         "cityName": "奈良",
         "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
+      },
+      {
+        "cityCode": "city006",
+        "cityName": "東京",
+        "image": "https://media.zenfs.com/zh-tw/ctwant_com_582/a5b4f402c2ba9a395dfad3228da5ab1a"
+      },
+      {
+        "cityCode": "city007",
+        "cityName": "京都",
+        "image": "https://i1.wp.com/www.tripresso.com/blog/wp-content/uploads/2019/06/boontohhgraphy.jpeg?resize=800%2C400&ssl=1"
+      },
+      {
+        "cityCode": "city008",
+        "cityName": "大阪",
+        "image": "https://resources.matcha-jp.com/resize/720x2000/2022/11/11-131807.webp"
+      },
+      {
+        "cityCode": "city009",
+        "cityName": "札幌",
+        "image": "https://obs.line-scdn.net/0hACbCE_vaHmxfOjK5bm5hO2VsHQNsVg1vOwxPbxxUQFgiWVo4MV1TAnw7SFtyClkyNlxYDn06BV10Xg09YAtT/w644"
+      },
+      {
+        "cityCode": "city0010",
+        "cityName": "奈良",
+        "image": "https://a.cdn-hotels.com/gdcs/production27/d1067/4aab9f56-ef95-42f4-b14c-d572774e24af.jpg"
       }
     ]
   },

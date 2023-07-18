@@ -1,3 +1,4 @@
+import SliderComponent from "../../../../../../shared/components/SliderComponent/SliderComponent";
 import "./RecommendList.scss";
 
 interface RecommendListProps {
@@ -11,14 +12,11 @@ const RecommendList = (props: RecommendListProps) => {
   return (
     <div className="recommend-list">
       <h2>{props.title}</h2>
-
       {items && items.length ? (
-        <div className="row g-2">{items.map((item) => item)}</div>
+        <SliderComponent nodes={items} count={4} />
       ) : (
         "尚未建立"
       )}
-
-      <div className="arrow"></div>
     </div>
   );
 };
