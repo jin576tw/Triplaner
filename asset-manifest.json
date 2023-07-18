@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/Triplaner/static/css/main.5e7249eb.css",
-    "main.js": "/Triplaner/static/js/main.88f2e8c7.js",
+    "main.css": "/Triplaner/static/css/main.03176236.css",
+    "main.js": "/Triplaner/static/js/main.0b503e41.js",
     "static/js/988.c9e68ef6.chunk.js": "/Triplaner/static/js/988.c9e68ef6.chunk.js",
     "static/media/bg.png": "/Triplaner/static/media/bg.26c146ca36f5a909293d.png",
+    "static/media/slick.svg": "/Triplaner/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Triplaner/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Triplaner/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/Indicator.svg": "/Triplaner/static/media/Indicator.839296e743a5c385887d.svg",
     "static/media/edit.svg": "/Triplaner/static/media/edit.43ab4ee02f5d873490ad.svg",
     "static/media/book.svg": "/Triplaner/static/media/book.592a95ac8d79bd8bef36.svg",
+    "static/media/slick.woff": "/Triplaner/static/media/slick.295183786cd8a1389865.woff",
     "static/media/member.svg": "/Triplaner/static/media/member.d7ce42e815d6c1694cf6.svg",
+    "static/media/add-item.svg": "/Triplaner/static/media/add-item.3d201053e761514bb807.svg",
     "static/media/arrow.svg": "/Triplaner/static/media/arrow.983f693526d5f48a00ed.svg",
     "static/media/mouse.svg": "/Triplaner/static/media/mouse.e97c7890c07a323e9a42.svg",
     "static/media/comment.svg": "/Triplaner/static/media/comment.e31092fe09f042d0672a.svg",
@@ -19,12 +24,12 @@
     "static/media/map.svg": "/Triplaner/static/media/map.1cddf93b36e15f517792.svg",
     "static/media/separators.svg": "/Triplaner/static/media/separators.2e6fefd961f8a9882f0d.svg",
     "static/media/drop-down.svg": "/Triplaner/static/media/drop-down.aef4167b9feaf5875880.svg",
-    "main.5e7249eb.css.map": "/Triplaner/static/css/main.5e7249eb.css.map",
-    "main.88f2e8c7.js.map": "/Triplaner/static/js/main.88f2e8c7.js.map",
+    "main.03176236.css.map": "/Triplaner/static/css/main.03176236.css.map",
+    "main.0b503e41.js.map": "/Triplaner/static/js/main.0b503e41.js.map",
     "988.c9e68ef6.chunk.js.map": "/Triplaner/static/js/988.c9e68ef6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e7249eb.css",
-    "static/js/main.88f2e8c7.js"
+    "static/css/main.03176236.css",
+    "static/js/main.0b503e41.js"
   ]
 }
