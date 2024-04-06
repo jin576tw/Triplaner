@@ -7,7 +7,9 @@ interface SiteWindowProps {
 }
 
 const SiteWindow = (props: SiteWindowProps) => {
-  const sites = props.sites.map((site) => <WindowItem name={site} />);
+  const sites = props.sites.map((site) => (
+    <WindowItem name={site} key={site} />
+  ));
 
   return <SliderComponent nodes={sites} count={4} />;
 };
