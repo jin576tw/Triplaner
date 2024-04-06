@@ -5,6 +5,7 @@
     "image": "https://zh-tw.skyticket.com/guide/wp-content/uploads/2020/03/38107927c0c6a7552696df52658010c2-e1583978798384.jpg",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "京都",
     "category": ["nature", "historical"],
     "favorites": 10542
@@ -15,6 +16,7 @@
     "image": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001379/img/basic/a0001379_main.jpg?20210126174019",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "東京",
     "category": ["city", "shopping"],
     "favorites": 10542
@@ -25,6 +27,7 @@
     "image": "https://d20aeo683mqd6t.cloudfront.net/zh-hant/articles/title_images/000/038/526/original/shutterstock_789020407.jpg?2021&d=750x400",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "北海道",
     "category": ["playgroundSite", "historical"],
     "favorites": 10542
@@ -35,6 +38,7 @@
     "image": "https://insidr.co/wp-content/uploads/2018/05/tmg-article_default_mobile.jpg",
     "region": "EU",
     "country": "法國",
+    "type": "site",
     "city": "巴黎",
     "category": ["city", "historical"],
     "favorites": 10542
@@ -45,6 +49,7 @@
     "image": "https://www.bring-you.info/wp-content/uploads/2020/12/Berliner_Fernsehturm-1.jpg",
     "region": "EU",
     "country": "德國",
+    "type": "site",
     "city": "柏林",
     "category": ["city", "historical"],
     "favorites": 10542
@@ -55,6 +60,7 @@
     "image": "https://www.sundaytour.com.tw/upfiles/chinese/attractions/tw_attractions_caty01481859437.jpg",
     "region": "EU",
     "country": "意大利",
+    "type": "site",
     "city": "威尼斯",
     "category": ["historical"],
     "favorites": 10542
@@ -65,6 +71,7 @@
     "image": "https://res.klook.com/image/upload/q_85/c_fill,w_750/fl_lossy.progressive/q_auto/blogtw/2019/06/1064137e6a8893-f409-4cc2-98ed-aec7e4cc3b78_m.jpg",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "沖繩",
     "category": ["playgroundSite", "historical"],
     "favorites": 10542
@@ -75,6 +82,7 @@
     "image": "https://res.klook.com/image/upload/q_85/c_fill,w_750/fl_lossy.progressive/q_auto/blogtw/2019/06/1064137e6a8893-f409-4cc2-98ed-aec7e4cc3b78_m.jpg",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "沖繩",
     "category": ["playgroundSite", "historical"],
     "favorites": 10542
@@ -85,6 +93,7 @@
     "image": "https://zh-tw.skyticket.com/guide/wp-content/uploads/2020/03/38107927c0c6a7552696df52658010c2-e1583978798384.jpg",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "京都",
     "category": ["nature", "historical"],
     "favorites": 10542
@@ -95,6 +104,7 @@
     "image": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001379/img/basic/a0001379_main.jpg?20210126174019",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "東京",
     "category": ["city", "shopping"],
     "favorites": 10542
@@ -105,6 +115,7 @@
     "image": "https://www.kkday.com/zh-hk/blog/wp-content/uploads/shutterstock_333525887-1.jpg",
     "region": "JP",
     "country": "日本",
+    "type": "site",
     "city": "北海道",
     "category": ["playgroundSite", "historical"],
     "favorites": 10542
@@ -115,6 +126,7 @@
     "image": "https://insidr.co/wp-content/uploads/2018/05/tmg-article_default_mobile.jpg",
     "region": "EU",
     "country": "法國",
+    "type": "site",
     "city": "巴黎",
     "category": ["city", "historical"],
     "favorites": 10542

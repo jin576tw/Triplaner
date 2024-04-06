@@ -1,6 +1,7 @@
 {
   "/Triplaner": "首頁",
   "/Triplaner/search": "探索景點",
+  "/Triplaner/search/detail": "探索景點明細",
   "/Triplaner/trip": "分享行程",
   "/Triplaner/addTrip": "新增行程",
   "/Triplaner/member": "會員中心"

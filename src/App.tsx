@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             element: <SearchPageIndex />,
           },
           {
-            path: ":target/:id",
+            path: "detail/:id",
             element: <SearchPageDetail />,
           },
         ],

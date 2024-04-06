@@ -7,4 +7,5 @@ export interface SiteItem {
   city: string;
   category: string[];
   favorites: number;
+  type: string;
 }

@@ -39,7 +39,10 @@ const BreadCrumbs = () => {
 
   /** 取得路徑位置 */
   const formatPath = (path: string) => {
-    return path === "/Triplaner/search" ? path + location.search : path;
+    return path === "/Triplaner/search" ||
+      path.includes("/Triplaner/search/detail")
+      ? path + location.search
+      : path;
   };
 
   /** 取得路徑名稱 */
@@ -54,6 +57,10 @@ const BreadCrumbs = () => {
       return pageLink[path] + `-${region ? region.name : ""}`;
     }
 
+    if (path.includes("/Triplaner/search/detail")) {
+      return searchParams.get("title");
+    }
+
     return pageLink[path] as string;
   };
 
@@ -62,9 +69,7 @@ const BreadCrumbs = () => {
       return {
         id: match.id,
         path: formatPath(match.pathname),
-        name: pageLink[match.pathname]
-          ? formatPathName(match.pathname)
-          : match.params.id,
+        name: formatPathName(match.pathname),
       };
     })
     .filter((path) => path.name);
