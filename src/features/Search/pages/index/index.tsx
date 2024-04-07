@@ -1,5 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 
+// import "./index.scss";
+
 import "./index.scss";
 
 import RegionAlias from "../../../../shared/JSON/regionAlias.json";

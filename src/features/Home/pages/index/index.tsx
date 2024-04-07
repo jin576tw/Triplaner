@@ -179,8 +179,8 @@ const Index = () => {
 
         <div className="routesWarp col-12">
           <div className="row g-3">
-            {popularRoutes.map(() => (
-              <RouteItem />
+            {popularRoutes.map((route) => (
+              <RouteItem key={route} />
             ))}
           </div>
         </div>
