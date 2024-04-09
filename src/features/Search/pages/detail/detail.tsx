@@ -1,10 +1,15 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "./detail.scss";
 
 import DETAIL from "../../../../shared/JSON/DataExample/siteDetailExample.json";
+
+import WEATHER from "../../../../shared/JSON/DataExample/weatherExample.json";
+
 import SiteWindow from "../../../Home/components/SiteWindow/SiteWindow";
+import WeatherWindow from "../../components/WeatherWindow/WeatherWindow";
+import { WeatherData } from "../../../../core/models/weather-data.model";
 
 interface SiteDetailItem {
   id: string;
@@ -32,11 +37,21 @@ const SearchPageDetail = () => {
     undefined
   );
 
+  const [weatherData, setWeatherDate] = useState<WeatherData | undefined>(
+    undefined
+  );
+
   const [relateSite, setRelateSite] = useState<any[]>([]);
 
   /** 獲取景點明細 */
   const fetchSiteDetail = (id: string) => {
     setSiteDetail(DETAIL);
+    fetchWeatherData(DETAIL.location);
+  };
+
+  /** 獲取天氣資訊 */
+  const fetchWeatherData = (location: number[]) => {
+    setWeatherDate(WEATHER);
   };
 
   const fetchRelateSite = () => {
@@ -48,7 +63,7 @@ const SearchPageDetail = () => {
       fetchSiteDetail(id);
       fetchRelateSite();
     }
-  }, []);
+  }, [id]);
 
   return siteDetail ? (
     <div className="site-detail-page">
@@ -78,7 +93,11 @@ const SearchPageDetail = () => {
           <div className="site-images">
             <img src={siteDetail.images[0]} alt={siteDetail.images[0]} />
           </div>
-          <div className="site-weather-block"></div>
+          <div className="site-weather-block">
+            {weatherData ? (
+              <WeatherWindow data={weatherData}></WeatherWindow>
+            ) : null}
+          </div>
         </div>
 
         <div className="site-detail-tags">

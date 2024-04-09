@@ -1,0 +1,47 @@
+{
+  "city": "長野縣",
+  "country": "日本",
+  "date": "2024-04-09T11:02:48.369Z",
+  "temperature": 10,
+  "type": "rain",
+  "highTemp": 13,
+  "lowTemp": 8,
+  "rainfall": 80,
+  "weathers": [
+    {
+      "date": "2024-04-09T11:02:48.369Z",
+      "type": "rain",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-10T11:02:48.369Z",
+      "type": "cloudy",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-11T11:02:48.369Z",
+      "type": "sunny",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-12T11:02:48.369Z",
+      "type": "cloudy",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-13T11:02:48.369Z",
+      "type": "snow",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-14T11:02:48.369Z",
+      "type": "snow",
+      "temperature": 13
+    },
+    {
+      "date": "2024-04-15T11:02:48.369Z",
+      "type": "snow",
+      "temperature": 13
+    }
+  ]
+}
