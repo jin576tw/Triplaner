@@ -1,0 +1,124 @@
+.weather-window {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+
+  .weather-window-content {
+    height: 55%;
+
+    .weather-warp {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      .weather-title {
+        width: 60%;
+
+        .weather-detail {
+          margin-top: 60px;
+          display: flex;
+          gap: 0.8rem;
+          color: #979797;
+
+          span:nth-of-type(3) {
+            position: relative;
+            padding-left: 25px;
+            margin-left: 8px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 2px;
+              width: 20px;
+              height: 20px;
+              background-image: url("../../../../assets/icons/umbrella.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+
+      .today-weather-warp {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .today-weather {
+          width: 60%;
+        }
+
+        .today-temperature {
+          font-family: Noto Sans TC;
+          font-size: 72px;
+          font-weight: 700;
+          line-height: 104.26px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .future-weather {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    gap: 0.3rem;
+
+    .future-weather-item {
+      width: 14.3%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #577655;
+
+      &:first-child {
+        font-weight: 700;
+      }
+
+      .weather-item-pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 1/1.2;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 0px 13px 0px #00000026;
+
+        margin: 10px 0;
+
+        > .weather-icon {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  .weather-icon {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.sunny-icon {
+      background-image: url("../../../../assets/icons/sunny.svg");
+    }
+
+    &.cloudy-icon {
+      background-image: url("../../../../assets/icons/cloudy.svg");
+    }
+
+    &.rainy-icon {
+      background-image: url("../../../../assets/icons/rainy.svg");
+    }
+
+    &.snowy-icon {
+      background-image: url("../../../../assets/icons/snowy.svg");
+    }
+  }
+}
