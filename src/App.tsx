@@ -12,6 +12,8 @@ import ErrorPage from "./layout/layout/ErrorPage/ErrorPage";
 import SearchPageIndex from "./features/Search/pages/index/index";
 import SearchPageDetail from "./features/Search/pages/detail/detail";
 import AddTripPageIndex from "./features/AddTrip/pages/index/index";
+import TripPageIndex from "./features/Trip/pages/index";
+import TripPageDetail from "./features/Trip/pages/detail/detail";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,16 @@ const router = createBrowserRouter([
       {
         path: "trip",
         element: <TripPage />,
+        children: [
+          {
+            index: true,
+            element: <TripPageIndex />,
+          },
+          {
+            path: "detail/:id",
+            element: <TripPageDetail />,
+          },
+        ],
       },
       {
         path: "addTrip",

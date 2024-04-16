@@ -1,5 +1,7 @@
+import { Outlet } from "react-router-dom";
+
 const TripPage = () => {
-  return <div>TripLayOut</div>;
+  return <Outlet></Outlet>;
 };
 
 export default TripPage;
